@@ -6,8 +6,8 @@ import Skill from "./Skillitem";
 
 const Skills = () => {
   return (
-    <div>
-      <div className="text-center mt-3">
+    <div className="bg-white dark:bg-black py-5">
+      <div className="text-center mt-3 ">
         <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
           Skills
         </h2>
