@@ -39,28 +39,29 @@ const navLinks = [
 const Nav = () => {
     const pathname = usePathname();
   return (
-    <div className="flex justify-between shadow-lg sticky  shadow-indigo-500/40 dark:shadow-indigo-300/40  dark:bg-slate-900">
+    <div className="flex justify-between shadow-lg sticky  shadow-indigo-500/40 dark:shadow-indigo-300/40  dark:bg-black/[0.96] antialiased bg-grid-white/[0.02]">
       <div>
       <Link href="/" className="flex items-center gap-2 md:py-2">
           <Image
-            src="/assets/images/RestoreMagic.png"
+            src="/images/logo.jpg"
             alt="logo"
-            width={180}
-            height={28}
+            width={50}
+            height={30}
+            className="rounded-full mx-5"
           />
         </Link>
       </div>
       <div>
-      <nav className="flex gap-2">
+      <nav className="flex gap-2 items-center justify-center">
         <Sheet>
         <Darkmode />
-          <SheetTrigger>
+          <SheetTrigger className="flex items-center gap-2 py-2">
             <Image
               src="/images/menu.svg"
               alt="menu"
               width={32}
               height={32}
-              className="cursor-pointer"
+              className="cursor-pointer flex items-center gap-2 md:py-2 mx-4"
             />
           </SheetTrigger>
           <SheetContent className="sheet-content sm:w-64">
