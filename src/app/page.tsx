@@ -4,6 +4,8 @@ import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Skills from "@/components/Skills";
 import React from "react";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import Footer from "@/components/Footer";
 
 const page = () => {
   return (
@@ -14,6 +16,8 @@ const page = () => {
       <Hero />
       <About/>
       <Skills />
+      <FeaturedProjects />
+      <Footer />
     </div>
   );
 };
