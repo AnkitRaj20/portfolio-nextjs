@@ -1,9 +1,8 @@
 import React from 'react'
 
-const Page = ({params}:any) => {
-  const id = params.id
+const Page = () => {
   return (
-    <div>project id :: {id} </div>
+    <div>Page</div>
   )
 }
 
