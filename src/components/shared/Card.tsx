@@ -7,7 +7,6 @@ const Card = ({
   id,
   name,
   description,
-  details,
   image,
   languagesUsed,
   isFeatured,

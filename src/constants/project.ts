@@ -15,7 +15,7 @@ export  const projectlist = [
         github: "https://github.com/AnkitRaj20/job-nextjs",
         url: "https://nayinaukri.netlify.app/",
         links: [],
-        tag: "FullStack",
+        tag: "fullstack",
     },
     {
         id: "2",
@@ -33,7 +33,7 @@ export  const projectlist = [
         github: "https://github.com/AnkitRaj20/RestoreMagic",
         url: "https://restoremagic.vercel.app/",
         links: [],
-        tag: "FullStack",
+        tag: "fullstack",
     },
     {
         id: "3",
@@ -49,7 +49,7 @@ export  const projectlist = [
         github: "https://github.com/AnkitRaj20/joymaker/tree/main",
         url: null,
         links: [],
-        tag: "FullStack",
+        tag: "fullstack",
     },
     {
         id: "4",
@@ -66,7 +66,7 @@ export  const projectlist = [
         github: "https://github.com/AnkitRaj20/portfolio-nextjs",
         url: "https://ankitcodes.vercel.app",
         links: [],
-        tag: "Frontend",
+        tag: "frontend",
     },   
     {
         id: "5",
@@ -82,7 +82,7 @@ export  const projectlist = [
         github: "https://github.com/AnkitRaj20/joymaker/tree/main",
         url: null,
         links: [],
-        tag: "FullStack",
+        tag: "fullstack",
     },    
     {
         id: "6",
@@ -98,7 +98,7 @@ export  const projectlist = [
         github: "https://github.com/AnkitRaj20/WeatherX.github.io/tree/main",
         url: "https://weather-x-github-io.vercel.app",
         links: [],
-        tag: "Frontend",
+        tag: "frontend",
     },
     {
         id: "7",
@@ -114,7 +114,7 @@ export  const projectlist = [
         github: "https://github.com/AnkitRaj20/react-TextUtils",
         url: "https://text-utils-iota.vercel.app/",
         links: [],
-        tag: "Frontend",
+        tag: "frontend",
     },
    
 ];
