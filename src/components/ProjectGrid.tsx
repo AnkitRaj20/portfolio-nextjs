@@ -11,14 +11,14 @@ const ProjectGrid = () => {
     }
   return (
     <Tabs defaultValue="all">
-      <TabsList className="mx-24 text-white dark:bg-zinc-900">
+      <TabsList className="mx-24 text-black dark:bg-zinc-900 dark:text-white">
         <TabsTrigger value="all">All</TabsTrigger>
         <TabsTrigger value="fullstack">FullStack</TabsTrigger>
         <TabsTrigger value="frontend">Frontend</TabsTrigger>
       </TabsList>
 
       <TabsContent value="all">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 mx-24 text-center mb-8">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 mx-8 sm:mx-12  md:mx-24 text-center mb-8">
           {projectlist.map((project): any => (
             <div key={project.id} onClick={() => detailsPage(project.id) }>
               <Card

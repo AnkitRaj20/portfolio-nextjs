@@ -13,6 +13,8 @@ import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import Darkmode from "./Darkmode";
 
+// Icons
+import { FaHome } from "react-icons/fa";
 const navLinks = [
   {
     label: "Home",
