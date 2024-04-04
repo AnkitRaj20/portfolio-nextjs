@@ -12,7 +12,7 @@ const Page = ({ params }: any) => {
     <div className="min-h-screen bg-gradient-to-tr from-indigo-100 via-purple-50 to-teal-100 dark:from-#2b4162 dark:via-slate-700 dark:to-#12100e">
 
       <div className="flex justify-between flex-col lg:flex-row gap-7">
-            <a href={project?.url} target="_blank" className="text-2xl mx-8 mt-12 sm:text-3xl font-bold">{project?.name}</a>
+            <a href={project?.url!} target="_blank" className="text-2xl mx-8 mt-12 sm:text-3xl font-bold">{project?.name}</a>
             <div className="flex gap-3 mx-8 mt-12 ">
               {project?.url && (
                 <a target="_blank" href={project?.url}>
@@ -67,7 +67,7 @@ const Page = ({ params }: any) => {
                 </strong>
 
                 <h3 className="mt-4 text-lg font-medium sm:text-xl">
-                  <a href={project?.url} target="_blank" className="hover:underline ">
+                  <a href={project?.url!} target="_blank" className="hover:underline ">
                     {project?.name}
                   </a>
                 </h3>

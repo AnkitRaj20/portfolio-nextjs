@@ -19,7 +19,7 @@ const navLinks = [
   {
     label: "Home",
     route: "/",
-    icon: "/assets/icons/home.svg",
+    icon: "/icons/home.png",
   },
   {
     label: "About",
