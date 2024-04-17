@@ -57,7 +57,7 @@ const Nav = () => {
       <nav className="flex gap-2 items-center justify-center">
         <Sheet>
         <Darkmode />
-          <SheetTrigger className="flex items-center gap-2 py-2">
+{/*           <SheetTrigger className="flex items-center gap-2 py-2">
             <Image
               src="/images/menu.svg"
               alt="menu"
@@ -65,7 +65,7 @@ const Nav = () => {
               height={32}
               className="cursor-pointer flex items-center gap-2 md:py-2 mx-4"
             />
-          </SheetTrigger>
+          </SheetTrigger> */}
           <SheetContent className="sheet-content sm:w-64">
             <>
               <Image
