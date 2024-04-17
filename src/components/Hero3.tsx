@@ -41,7 +41,7 @@ export default function Hero3() {
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
         Let&apos;s build something extraordinary together.
         </div>
-        {/* <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
+        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
           Debug now
         </button> */}
         <div className=" py-6 flex items-center justify-center">

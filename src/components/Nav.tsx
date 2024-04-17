@@ -52,10 +52,27 @@ const Nav = () => {
         </Link>
       </div>
       <div>
+<<<<<<< HEAD
         <nav className="flex gap-2 items-center justify-center">
           <Sheet>
             <Darkmode />
             {/* <SheetTrigger className="flex items-center gap-2 py-2">
+=======
+      <nav className="flex gap-2 items-center justify-center">
+        <Sheet>
+        <Darkmode />
+{/*           <SheetTrigger className="flex items-center gap-2 py-2">
+            <Image
+              src="/images/menu.svg"
+              alt="menu"
+              width={32}
+              height={32}
+              className="cursor-pointer flex items-center gap-2 md:py-2 mx-4"
+            />
+          </SheetTrigger> */}
+          <SheetContent className="sheet-content sm:w-64">
+            <>
+>>>>>>> 7c3438c2465762d228edc369b83a0c0c02dc3a06
               <Image
                 src="/images/menu.svg"
                 alt="menu"
