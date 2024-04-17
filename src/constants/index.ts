@@ -1,3 +1,26 @@
+export const navLinks = [
+  {
+    label: "Home",
+    route: "/",
+    icon: "/icons/home.png",
+  },
+  {
+    label: "About",
+    route: "/about",
+    icon: "/assets/icons/image.svg",
+  },
+  {
+    label: "Projects",
+    route: "/projects",
+    icon: "/assets/icons/stars.svg",
+  },
+  {
+    label: "Conatct",
+    route: "/contact",
+    icon: "/assets/icons/scan.svg",
+  },
+];
+
 export const MySkills = [
     {
       url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
