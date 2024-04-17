@@ -13,6 +13,8 @@ import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import Darkmode from "./Darkmode";
 
+// Icons
+import { FaHome } from "react-icons/fa";
 const navLinks = [
   {
     label: "Home",
@@ -37,11 +39,11 @@ const navLinks = [
 ];
 
 const Nav = () => {
-  const pathname = usePathname();
+    const pathname = usePathname();
   return (
     <div className="flex justify-between shadow-lg sticky  shadow-indigo-500/40 dark:shadow-indigo-300/40  dark:bg-black/[0.96] antialiased bg-grid-white/[0.02]">
       <div>
-        <Link href="/" className="flex items-center gap-2 md:py-2">
+      <Link href="/" className="flex items-center gap-2 md:py-2">
           <Image
             src="/images/logo.jpg"
             alt="logo"
@@ -52,12 +54,6 @@ const Nav = () => {
         </Link>
       </div>
       <div>
-<<<<<<< HEAD
-        <nav className="flex gap-2 items-center justify-center">
-          <Sheet>
-            <Darkmode />
-            {/* <SheetTrigger className="flex items-center gap-2 py-2">
-=======
       <nav className="flex gap-2 items-center justify-center">
         <Sheet>
         <Darkmode />
@@ -72,92 +68,75 @@ const Nav = () => {
           </SheetTrigger> */}
           <SheetContent className="sheet-content sm:w-64">
             <>
->>>>>>> 7c3438c2465762d228edc369b83a0c0c02dc3a06
               <Image
-                src="/images/menu.svg"
+                src="/assets/images/RestoreMagic.png"
                 alt="menu"
-                width={32}
+                width={152}
                 height={32}
-                className="cursor-pointer flex items-center gap-2 md:py-2 mx-4"
+                className="cursor-pointer"
               />
-            </SheetTrigger> */}
-            <SheetContent className="sheet-content sm:w-64">
-              <>
-                <Link href="/">
-                  <Image
-                    src="/images/logo.jpg"
-                    alt="logo"
-                    width={50}
-                    height={30}
-                    className="rounded-full cursor-pointer"
-                  />
-                </Link>
-                {/* RestoreMagic logo*/}
-                <ul className="header-nav_elements">
-                  {navLinks.map((link) => {
-                    const isActive = link.route === pathname;
-                    return (
-                      <li
-                        key={link.route}
-                        className={` sidebar-nav_element ${
-                          isActive && "text-indigo-600"
-                        } p-18 flex flex-row whitespace-nowrap text-dark-700`}
-                        // className={`sidebar-nav_element group p-18 ${
-                        //   isActive
-                        //     ? " text-indigo-600"
-                        //     : "text-gray-700"
-                        // }`}
-                      >
-                        <Link
-                          className="sidebar-link flex flex-row my-5 cursor-pointer"
-                          href={link.route}
-                        >
-                          <Image
-                            src={link.icon}
-                            alt="logo"
-                            width={24}
-                            height={24}
-                            className="flex flex-row"
-                          />
-                          {link.label}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
+              {/* RestoreMagic logo*/}
+              <ul className="header-nav_elements">
+                {navLinks.map((link) => {
+                  const isActive = link.route === pathname;
 
-                {/* <ul className="sidebar-nav_elements">
-                  {navLinks.map((link) => {
-                    const isActive = link.route === pathname;
-                    console.log("isActive",isActive)
-                    return (
-                      <li
-                        key={link.route}
-                        className={`sidebar-nav_element group ${
-                          isActive
-                            ? "bg-red-800 text-white"
-                            : "text-gray-700"
-                        }`}
+                  return (
+                    <li
+                      key={link.route}
+                      className={`${
+                        isActive && "gradient-text"
+                      } p-18 flex whitespace-nowrap text-dark-700`}
+                    >
+                      <Link
+                        className="sidebar-link cursor-pointer"
+                        href={link.route}
                       >
-                        <Link className="sidebar-link" href={link.route}>
-                          <Image
-                            src={link.icon}
-                            alt="logo"
-                            width={24}
-                            height={24}
-                            className={`${isActive && "brightness-200"}`}
-                          />
-                          {link.label}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul> */}
-              </>
-            </SheetContent>
-          </Sheet>
-        </nav>
+                        <Image
+                          src={link.icon}
+                          alt="logo"
+                          width={24}
+                          height={24}
+                        />
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <ul className="sidebar-nav_elements">
+                {navLinks.slice(6).map((link) => {
+                  const isActive = link.route === pathname;
+
+                  return (
+                    <li
+                      key={link.route}
+                      className={`sidebar-nav_element group ${
+                        isActive
+                          ? "bg-purple-gradient text-white"
+                          : "text-gray-700"
+                      }`}
+                    >
+                      <Link className="sidebar-link" href={link.route}>
+                        <Image
+                          src={link.icon}
+                          alt="logo"
+                          width={24}
+                          height={24}
+                          className={`${isActive && "brightness-200"}`}
+                        />
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </>
+          </SheetContent>
+        </Sheet>
+      </nav>
       </div>
+  
     </div>
   );
 };
