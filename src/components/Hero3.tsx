@@ -45,7 +45,7 @@ export default function Hero3() {
           Debug now
         </button> */}
         <div className=" py-6 flex items-center justify-center">
-          <Link href={"/"}>
+          <Link href={"mailto:work.ankitraj177@gmail.com"}>
             <Button
               borderRadius="1.75rem"
               className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 max-w-lg text-center mx-auto "
@@ -54,7 +54,7 @@ export default function Hero3() {
             </Button>
           </Link>
 
-          <Link href={"/"} className="mx-6">
+          <Link target="_blank" href={"https://www.linkedin.com/in/ankit-raj-716781254/"} className="mx-6">
             <button className="inline-flex h-16 animate-shimmer items-center justify-center border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 rounded-full">
               LinkedIn
               <svg

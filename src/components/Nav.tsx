@@ -22,8 +22,8 @@ const navLinks = [
     icon: "/icons/home.png",
   },
   {
-    label: "About",
-    route: "/about",
+    label: "Resume",
+    route: "/resume",
     icon: "/assets/icons/image.svg",
   },
   {
@@ -33,7 +33,7 @@ const navLinks = [
   },
   {
     label: "Conatct",
-    route: "/contact",
+    route: "mailto:work.ankitraj177@gmail.com",
     icon: "/assets/icons/scan.svg",
   },
 ];
@@ -57,7 +57,7 @@ const Nav = () => {
       <nav className="flex gap-2 items-center justify-center">
         <Sheet>
         <Darkmode />
-{/*           <SheetTrigger className="flex items-center gap-2 py-2">
+          <SheetTrigger className="flex items-center gap-2 py-2">
             <Image
               src="/images/menu.svg"
               alt="menu"
@@ -65,15 +65,15 @@ const Nav = () => {
               height={32}
               className="cursor-pointer flex items-center gap-2 md:py-2 mx-4"
             />
-          </SheetTrigger> */}
+          </SheetTrigger>
           <SheetContent className="sheet-content sm:w-64">
             <>
               <Image
-                src="/assets/images/RestoreMagic.png"
+                src="/images/logo.jpg"
                 alt="menu"
-                width={152}
+                width={32}
                 height={32}
-                className="cursor-pointer"
+                className="cursor-pointer rounded-full"
               />
               {/* RestoreMagic logo*/}
               <ul className="header-nav_elements">
@@ -88,15 +88,15 @@ const Nav = () => {
                       } p-18 flex whitespace-nowrap text-dark-700`}
                     >
                       <Link
-                        className="sidebar-link cursor-pointer"
+                        className=" mt-5 sidebar-link cursor-pointer h-12"
                         href={link.route}
                       >
-                        <Image
+                        {/* <Image
                           src={link.icon}
                           alt="logo"
                           width={24}
                           height={24}
-                        />
+                        /> */}
                         {link.label}
                       </Link>
                     </li>
