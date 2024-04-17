@@ -27,7 +27,7 @@ const FeaturedProjects = () => {
         {
             projectlist.filter((p):any => p.isFeatured).map(project => (
                 <div key={project.id}  onClick={() => detailsPage(project.id) }>
-                    <Card id={project.id} name={project.name} description={project.detailedDescription} languagesUsed={project.languagesUsed} github={project.github} url={project.url} />
+                    <Card id={project.id} name={project.name} description={project.detailedDescription} languagesUsed={project.languagesUsed} github={project.github} url={project.url} image={project.image} />
                 </div>
             ))
         }

@@ -28,13 +28,14 @@ const Page = ({ params }: any) => {
               </a>
             </div>
           </div>
-      <div className=" dark:text-gray-100  grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 rounded-xl m-4 p-4 ring ring-red-500 sm:p-6 lg:p-8">
-        <div className="m-4 sm:m-12 rounded-lg bg-gray-200 p-4 ring ring-red-500">
+      <div className=" dark:text-gray-100  grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 rounded-xl m-4 p-4 ring ring-indigo-50 sm:p-6 lg:p-8">
+        <div className="m-4 sm:m-12 rounded-lg  p-4 ">
           <img
             alt=""
-            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-            className="h-56 w-full object-cover"
+            src={project?.image}
+            className="h-60 w-full ring ring-indigo-50"
           />
+        
 
           <p className="opacity-50 text-sm mt-4 mb-2">Technology Used</p>
           {project?.languagesUsed.map((btn: any, i: any) => (
@@ -59,7 +60,7 @@ const Page = ({ params }: any) => {
           
           {/* TODO: Change ring-red-500 to ring-indigo-50 */}
 
-          <article className="rounded-xl  p-4 ring ring-red-500 sm:p-6 lg:p-8">
+          <article className="rounded-xl  p-4 ring ring-indigo-50 sm:p-6 lg:p-8">
             <div className="flex items-start sm:gap-8">
               <div>
                 <strong className="rounded border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
@@ -82,16 +83,16 @@ const Page = ({ params }: any) => {
                   <p>{project?.status}</p>
                 </div>
 
-                {/* <p className="opacity-50 text-sm mt-4 mb-2">Features</p>
+                <p className="opacity-50 text-sm mt-4 mb-2">Features</p>
                 <ul>
                   {project?.features.map((feature: any, i: any) => (
                     <li key={i} className="mb-2">
                       {`${i + 1}`}. {feature}
                     </li>
                   ))}
-                </ul> */}
+                </ul>
 
-                <div className="mt-4 sm:flex sm:items-center sm:gap-2">
+                {/* <div className="mt-4 sm:flex sm:items-center sm:gap-2">
                   <div className="flex items-center gap-1 text-gray-500">
                     <svg
                       className="h-4 w-4"
@@ -129,13 +130,13 @@ const Page = ({ params }: any) => {
                       August
                     </a>
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </article>
         </div>
       </div>
-      <div className=" dark:text-gray-100 rounded-xl mx-4 my-2  p-4 ring ring-red-500 sm:p-6 lg:p-8">
+      {/* <div className=" dark:text-gray-100 rounded-xl mx-4 my-2  p-4 ring ring-indigo-50 sm:p-6 lg:p-8">
         <p className="opacity-50 text-sm mt-4 mb-2">Features</p>
         <ul>
           {project?.features.map((feature: any, i: any) => (
@@ -144,7 +145,7 @@ const Page = ({ params }: any) => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

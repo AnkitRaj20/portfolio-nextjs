@@ -28,6 +28,7 @@ const ProjectGrid = () => {
                 languagesUsed={project.languagesUsed}
                 github={project.github}
                 url={project.url}
+                image={project.image}
               />
             </div>
           ))}
@@ -45,6 +46,7 @@ const ProjectGrid = () => {
                 languagesUsed={project.languagesUsed}
                 github={project.github}
                 url={project.url}
+                image={project.image}
               />
             </div>
           ))}
@@ -61,6 +63,7 @@ const ProjectGrid = () => {
                 languagesUsed={project.languagesUsed}
                 github={project.github}
                 url={project.url}
+                image={project.image}
               />
             </div>
           ))}

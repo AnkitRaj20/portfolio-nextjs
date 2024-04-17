@@ -27,7 +27,6 @@ const Timeline = () => {
         className="opacity-95"
         animate={true}
         lineColor= {theme.theme === 'light' ? "#262626" : "#ffffff"}
-
       >
         {Education.map((e, i) => (
           <VerticalTimelineElement

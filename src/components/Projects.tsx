@@ -22,8 +22,7 @@ const Projects = () => {
         </TabsList>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 mx-8 text-center">
-        <TabsContent value="all">
-          
+          <TabsContent value="all">
             {projectlist.map((project): any => (
               <div key={project.id}>
                 <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25">
@@ -56,9 +55,9 @@ const Projects = () => {
                 </article>
               </div>
             ))}
-        </TabsContent>
-          </div>
-        <TabsContent value="password">Change your password here.</TabsContent>
+          </TabsContent>
+        </div>
+        
       </Tabs>
     </div>
   );
