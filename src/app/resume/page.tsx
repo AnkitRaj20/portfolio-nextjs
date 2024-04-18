@@ -19,7 +19,7 @@ const ResumePage = () => {
       </div>
       <div className="px-[1.2rem] md:px-[9rem] flex flex-col justify-center items-center">
         <div className="max-w-[400px]  overflow-hidden flex flex-col ">
-          <h2 className="text-center font-bold text-sm text-[#FF8911] uppercase tracking-wider mb-4">
+          <h2 className="text-center text-base text-teal-600 font-semibold tracking-wide uppercase">
             Resume
           </h2>
           <p className="text-center text-2xl sm:text-3xl mb-4 font-extrabold">
