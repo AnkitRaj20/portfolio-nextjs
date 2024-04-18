@@ -1,4 +1,3 @@
-import { MdSchool } from "react-icons/md";
 export const Education = [
     {
       Date: "2022 - 2024",

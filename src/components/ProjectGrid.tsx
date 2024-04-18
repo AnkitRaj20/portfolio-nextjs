@@ -52,6 +52,7 @@ const ProjectGrid = () => {
           ))}
         </div>
       </TabsContent>
+
       <TabsContent value="frontend">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 mx-24 text-center">
           {projectlist.filter((p):any => p.tag === 'frontend').map((project): any => (
