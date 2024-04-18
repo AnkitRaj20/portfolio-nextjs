@@ -9,7 +9,7 @@ const words = `A Dedicated Master's in Computer Application candidate with a pro
 export default function About() {
   return (
     <div className="h-full w-full dark:bg-black bg-white  dark:bg-dot-white/[0.3] bg-dot-black/[0.4] relative py-8">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+ 
       <div className="text-center mt-3">
         <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
           About

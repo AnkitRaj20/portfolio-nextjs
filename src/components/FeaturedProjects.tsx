@@ -34,7 +34,9 @@ const FeaturedProjects = () => {
       </div>
 
     <div className="flex item-center justify-center my-8 ">
-      <Button  className="p-4" variant="outline" onClick={() => router.push("/projects")}>   Show All Project</Button>
+      <Button   borderRadius="1.75rem"
+              className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 max-w-lg text-center mx-auto "
+             onClick={() => router.push("/projects")}>   Show All Project</Button>
       
     </div>
       

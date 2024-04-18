@@ -36,7 +36,7 @@ const ProjectGrid = () => {
       </TabsContent>
      
       <TabsContent value="fullstack">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 mx-24 text-center">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 mx-8 sm:mx-12  md:mx-24 text-center mb-8">
           {projectlist.filter((p):any => p.tag === 'fullstack').map((project): any => (
             <div key={project.id} onClick={() => detailsPage(project.id) }>
               <Card
@@ -54,7 +54,7 @@ const ProjectGrid = () => {
       </TabsContent>
 
       <TabsContent value="frontend">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 mx-24 text-center">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 mx-8 sm:mx-12  md:mx-24 text-center mb-8">
           {projectlist.filter((p):any => p.tag === 'frontend').map((project): any => (
             <div key={project.id} onClick={() => detailsPage(project.id) }>
               <Card
