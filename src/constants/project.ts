@@ -2,7 +2,7 @@
 export  const projectlist = [
     {
         id: "1",
-        name: "NayiNaurkri",
+        name: "NayiNaukri",
         description: "Online job Platform using Next JS that connect job seekers with employers.",
         detailedDescription:"NayiNaukri is an online platform that connect job seekers with employers. These websites provide a centralized location for job postings, allowing individuals to search and apply for jobs in various industries and locations. Job websites have become an essential tool in the job search process, providing convenient access to job opportunities and a means for employers to reach a wide pool of potential candidates.",
         image: "/images/nayinaukri.png",
