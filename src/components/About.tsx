@@ -42,11 +42,11 @@ export default function About() {
         </div>
         <div>
           <Image
-            src="/images/mine.png"
+            src="/images/mine2.jpg"
             height={400}
             width={400}
             alt="me"
-            className="m-auto flex"
+            className="m-auto flex  rounded-full "
           />
         </div>
       </div>
