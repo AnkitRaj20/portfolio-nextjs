@@ -30,8 +30,8 @@ const navLinks = [
     icon: "/assets/icons/stars.svg",
   },
   {
-    label: "Conatct",
-    route: "mailto:work.ankitraj177@gmail.com",
+    label: "Contact",
+    route: "mailto:ankit21654@gmail.com",
     icon: "/assets/icons/scan.svg",
   },
 ];
