@@ -41,7 +41,7 @@ const ProjectGrid = () => {
 
   return (
     <Tabs defaultValue="all">
-      <TabsList className="mx-24 text-black dark:bg-zinc-900 dark:text-white">
+      <TabsList className="lg:mx-24 mx-6 my-2 text-black dark:bg-zinc-900 dark:text-white">
         <TabsTrigger value="all">All</TabsTrigger>
         <TabsTrigger value="fullstack">FullStack</TabsTrigger>
         <TabsTrigger value="frontend">Frontend</TabsTrigger>

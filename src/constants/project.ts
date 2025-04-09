@@ -261,6 +261,7 @@ export const projectlist = [
         url: "https://text-utils-iota.vercel.app/",
         links: [],
         tag: "frontend",
+        "sequence" : 70
     },
     {
         id: "8",
