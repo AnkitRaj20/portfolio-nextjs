@@ -17,9 +17,9 @@ const Skills = () => {
       </div>
 
      
-      <div className="flex items-center justify-center flex-wrap gap-8 sm:max-w-4xl m-auto pb-8">
+      <div className="flex items-center justify-center flex-wrap gap-4 sm:max-w-4xl m-auto pb-8">
         {MySkills.map((s):any => (
-          <Skill key={s.url} skill={s} />
+          <Skill key={s.url} skill={s}  />
         ))}
       </div>
     </div>

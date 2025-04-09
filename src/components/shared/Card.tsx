@@ -13,6 +13,7 @@ const Card = ({
   status,
   github,
   url,
+  tag
 }: any) => {
   return (
     <div>
@@ -22,6 +23,8 @@ const Card = ({
           src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           className="h-56 w-full object-cover"
         /> */}
+        
+        
         <img
           alt={name}
           src={image}
@@ -54,7 +57,7 @@ const Card = ({
           </div>
 
           <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400 text-start">
-            {description}
+          {description.replace(/<br\s*\/?>/g, ' ')}
           </p>
 
           <div className="flex justify-between mt-2 gap-2">

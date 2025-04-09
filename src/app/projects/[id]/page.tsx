@@ -28,11 +28,14 @@ const Page = ({ params }: any) => {
               </Button>
             </a>
           )}
-          <a target="_blank" href={project?.github}>
-            <Button size={"sm"} variant="outline" className="border-2">
-              Repository
-            </Button>
-          </a>
+
+          {project?.github && (
+            <a target="_blank" href={project?.github}>
+              <Button size={"sm"} variant="outline" className="border-2">
+                Repository
+              </Button>
+            </a>
+          )}
         </div>
       </div>
       <div className=" dark:text-gray-100 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 rounded-xl m-4 p-4 sm:p-6 lg:p-8">
@@ -84,9 +87,13 @@ const Page = ({ params }: any) => {
                   </a>
                 </h3>
 
-                <p className="mt-1 text-sm text-gray-700 dark:text-white">
-                  {project?.detailedDescription}
-                </p>
+                <p
+                  className="mt-1 text-sm text-gray-700 dark:text-white"
+                  dangerouslySetInnerHTML={{
+                    __html: project?.detailedDescription as string,
+                  }}
+                ></p>
+
                 <p className="opacity-50 text-sm mt-5">Status</p>
 
                 <div className="flex items-center gap-2">
