@@ -28,7 +28,7 @@ const Card = ({
         <img
           alt={name}
           src={image}
-          className="h-56 w-full object-cover"
+          className="h-56 w-full object-fill"
         />
 
         <div className="bg-white p-4 sm:p-6 dark:bg-gray-900">
