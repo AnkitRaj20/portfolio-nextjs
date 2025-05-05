@@ -63,7 +63,7 @@ const Card = ({
           <div className="flex justify-between mt-2 gap-2">
             <div className="flex gap-4">
               {languagesUsed.map((btn: any, i: any) => (
-                <Button key={i} className="text-lg p-2 px-2 dark:bg-zinc-800 bg-zinc-100 rounded-md w-fit" variant="outline" size="icon">
+                <Button key={i} className="text-lg p-2 px-2 bg-zinc-100 rounded-md w-fit hover:bg-teal-400" variant="outline" size="icon">
                   <Image
                     src={btn}
                     alt="icon"

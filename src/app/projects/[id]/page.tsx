@@ -52,7 +52,7 @@ const Page = ({ params }: any) => {
           {project?.languagesUsed.map((btn: any, i: any) => (
             <Button
               key={i}
-              className="text-lg p-2 px-2 dark:bg-zinc-800 bg-zinc-100 rounded-md w-fit mx-4"
+              className="text-lg px-2 bg-zinc-100 rounded-md w-fit mx-2 hover:bg-teal-400"
               variant="outline"
               size="icon"
             >
