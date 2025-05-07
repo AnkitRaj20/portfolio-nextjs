@@ -15,6 +15,11 @@ export const navLinks = [
     icon: "/assets/icons/stars.svg",
   },
   {
+    label: "Blogs",
+    route: "/blogs",
+    icon: "/assets/icons/stars.svg",
+  },
+  {
     label: "Conatct",
     route: "/contact",
     icon: "/assets/icons/scan.svg",

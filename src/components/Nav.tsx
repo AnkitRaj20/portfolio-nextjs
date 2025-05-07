@@ -30,6 +30,11 @@ const navLinks = [
     icon: "/assets/icons/stars.svg",
   },
   {
+    label: "Blogs",
+    route: "/blogs",
+    icon: "/assets/icons/stars.svg",
+  },
+  {
     label: "Contact",
     route: "mailto:ankit21654@gmail.com",
     icon: "/assets/icons/scan.svg",
