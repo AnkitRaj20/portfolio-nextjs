@@ -31,7 +31,7 @@ const ProjectGrid = () => {
               github={project.github}
               url={project.url}
               image={project.image}
-              tag={project.tag}
+              tag={project.tag as 'development' | 'dsa' | undefined}
             />
           </div>
         ))}
