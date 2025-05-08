@@ -128,8 +128,8 @@ type Props = {
   description?: string;
   image?: string;
   languagesUsed?: string[];
-  github?: string;
-  url?: string;
+  github?: string | null;
+  url?: string | null;
   tag?: 'dsa' | 'development';
   isBlog?: boolean;
   publishedAt?: string;
