@@ -51,7 +51,7 @@ export async function GET() {
       coverImage: {
         url: string;
       };
-      tag?: string; // Optional tag property
+      tag?: string;
     }
 
     interface PostEdge {
@@ -81,15 +81,28 @@ export async function GET() {
       edge.node.tag = "dsa";
       return edge.node;
     });
-    return NextResponse.json({ development, dsa });
+
+    return new NextResponse(JSON.stringify({ development, dsa }), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-store", // 🚫 Prevent caching
+      },
+    });
   } catch (error: any) {
     console.error(
       "Hashnode API error:",
       error?.response?.data || error.message
     );
-    return NextResponse.json(
-      { error: "Failed to fetch posts from Hashnode." },
-      { status: 500 }
+    return new NextResponse(
+      JSON.stringify({ error: "Failed to fetch posts from Hashnode." }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control": "no-store", // Optional: no cache on error too
+        },
+      }
     );
   }
 }
