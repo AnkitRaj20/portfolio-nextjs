@@ -449,4 +449,44 @@ export const projectlist = [
     tag: "backend",
     sequence: 3,
   },
+  {
+  id: "12",
+  name: "Blog Platform Backend",
+  description: "Scalable MERN Blog Backend with Nested Comments and Emoji Reactions",
+  detailedDescription: `This is a powerful and scalable backend API for a modern blog platform built with the MERN stack. <br /><br />
+  Designed for extensibility and performance, this backend provides complete support for user authentication, content management, and an interactive commenting system. <br /><br />
+  Key technical highlights include: <br />
+  - 🔐 **JWT-Based Authentication**: Secure login, registration, and token-based route protection.<br />
+  - 💬 **Comment System**: Fully featured nested comment and reply system with CRUD operations.<br />
+  - 😊 **Emoji Reactions**: Facebook-style emoji reactions on blog posts.<br />
+  - ☁️ **Profile Image Uploads**: File uploads using Multer with local or cloud storage support.<br />
+  - 🧾 **Blog CRUD API**: Create, read, update, and delete blogs with clean RESTful endpoints.<br />
+  - 🛡️ **Security Best Practices**: Helmet, CORS, rate limiting, and bcrypt password hashing.<br />
+  - 🔗 **Versioned Routes**: All endpoints follow a scalable \`/api/v1/\` structure.<br /><br />
+  Ideal for blog platforms or as a backend boilerplate for developers looking to learn real-world CRUD systems with nested structures.`,
+  image: "/images/blog.png",
+  languagesUsed: [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+  ],
+  isFeatured: false,
+  status: "Live",
+  features: [
+    "JWT-Based User Authentication",
+    "Nested Comments and Replies (Full CRUD)",
+    "Emoji Reactions on Blog Posts",
+    "Profile Picture Upload via Multer",
+    "RESTful Blog CRUD APIs",
+    "Role-Based Middleware (User/Admin)",
+    "Security: Helmet, Rate Limiting, Bcrypt, CORS",
+    "Modular Controller-Service Architecture",
+    "Clean Versioned Routes under /api/v1/"
+  ],
+  github: "https://github.com/AnkitRaj20/blog-backend",
+  links: [],
+  tag: "backend",
+  sequence: 6
+}
+
 ];
