@@ -450,10 +450,11 @@ export const projectlist = [
     sequence: 3,
   },
   {
-  id: "12",
-  name: "Blog Platform Backend",
-  description: "Scalable MERN Blog Backend with Nested Comments and Emoji Reactions",
-  detailedDescription: `This is a powerful and scalable backend API for a modern blog platform built with the MERN stack. <br /><br />
+    id: "12",
+    name: "Blog Platform Backend",
+    description:
+      "Scalable MERN Blog Backend with Nested Comments and Emoji Reactions",
+    detailedDescription: `This is a powerful and scalable backend API for a modern blog platform built with the MERN stack. <br /><br />
   Designed for extensibility and performance, this backend provides complete support for user authentication, content management, and an interactive commenting system. <br /><br />
   Key technical highlights include: <br />
   - 🔐 **JWT-Based Authentication**: Secure login, registration, and token-based route protection.<br />
@@ -464,29 +465,129 @@ export const projectlist = [
   - 🛡️ **Security Best Practices**: Helmet, CORS, rate limiting, and bcrypt password hashing.<br />
   - 🔗 **Versioned Routes**: All endpoints follow a scalable \`/api/v1/\` structure.<br /><br />
   Ideal for blog platforms or as a backend boilerplate for developers looking to learn real-world CRUD systems with nested structures.`,
-  image: "/images/blog.png",
-  languagesUsed: [
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-  ],
-  isFeatured: false,
-  status: "Live",
-  features: [
-    "JWT-Based User Authentication",
-    "Nested Comments and Replies (Full CRUD)",
-    "Emoji Reactions on Blog Posts",
-    "Profile Picture Upload via Multer",
-    "RESTful Blog CRUD APIs",
-    "Role-Based Middleware (User/Admin)",
-    "Security: Helmet, Rate Limiting, Bcrypt, CORS",
-    "Modular Controller-Service Architecture",
-    "Clean Versioned Routes under /api/v1/"
-  ],
-  github: "https://github.com/AnkitRaj20/blog-backend",
-  links: [],
-  tag: "backend",
-  sequence: 6
-}
-
+    image: "/images/blog.png",
+    languagesUsed: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+    ],
+    isFeatured: false,
+    status: "Live",
+    features: [
+      "JWT-Based User Authentication",
+      "Nested Comments and Replies (Full CRUD)",
+      "Emoji Reactions on Blog Posts",
+      "Profile Picture Upload via Multer",
+      "RESTful Blog CRUD APIs",
+      "Role-Based Middleware (User/Admin)",
+      "Security: Helmet, Rate Limiting, Bcrypt, CORS",
+      "Modular Controller-Service Architecture",
+      "Clean Versioned Routes under /api/v1/",
+    ],
+    github: "https://github.com/AnkitRaj20/blog-backend",
+    links: [],
+    tag: "backend",
+    sequence: 6,
+  },
+  {
+    id: "13",
+    name: "Khiladi Adda",
+    description: "Real Money Gaming Platform with Wallet & Compliance Systems",
+    detailedDescription: `Khiladi Adda is a flagship real money gaming (RMG) application where users can register, complete KYC, deposit funds, play games, and withdraw winnings. <br /><br />
+  Built with Node.js, Express.js, and MongoDB/PostgreSQL, the platform ensures compliance and scalability while handling high-traffic gaming operations. It has multiple Games <br /><br />
+  Key highlights include: <br />
+  - 🔐 **KYC Workflows**: Aadhaar/PAN updation with secure onboarding. <br />
+  - 💳 **Wallet System**: Real-time balance updates and transaction logs. <br />
+  - ⚡ **Optimized APIs**: Batch processing reduced latency by 40%, Redis caching achieved ~4–5 ms responses. <br />
+  - 📊 **Google Sheets Streaming**: Replaced Excel exports, saving ~₹1 Lakh infra cost and supporting 1+ lakh records. <br />
+  - 🎮 ** Multiple Games**: It has multiple games like Ludo , Rummy , Ludo Tournament , Cricket Tournament etc. <br />
+  - 🔐 **Security**: Password hashing (Bcrypt), encryption (Crypto), rate limiting for integrations.`,
+    image: backendImageUrl,
+    languagesUsed: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
+    ],
+    isFeatured: true,
+    status: "Live",
+    features: [
+      "User Registration & KYC",
+      "Wallet Management",
+      "Multiple Payment Gateways",
+      "Batch API Processing & Redis Caching",
+      "Google Sheets Streaming for Large Data",
+    ],
+    links: [],
+    tag: "backend",
+    sequence: 2,
+  },
+  {
+    id: "14",
+    name: "RummyAdda",
+    description: "Online Rummy Gaming Platform with Admin Panel",
+    detailedDescription: `RummyAdda is a secure and feature-rich Rummy gaming platform integrated into the Khiladi Adda ecosystem. <br /><br />
+  It provides smooth user experiences, wallet handling, and compliance integrations. <br /><br />
+  Technical highlights: <br />
+  - 🔑 **Authentication** with JWT and secure password hashing. <br />
+  - 🎮 **Game APIs** optimized for high traffic with Redis caching. <br />
+  - 🌍 **Location-Based Compliance**: Auto-detects user's IP for state/country-specific rules. <br />
+  - 💵 **Wallet Flows** including deposits, withdrawals, and winnings transfer. <br />
+  - 📝 **Admin Panel** contributions in React.js for real-time monitoring. <br />
+  - 🛡️ **Data Security** with Bcrypt & Crypto encryption. <br />
+  - ⚡ **Performance Optimizations** reducing API latency significantly.`,
+    image: backendImageUrl,
+    languagesUsed: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    ],
+    isFeatured: true,
+    status: "Live",
+    features: [
+      "JWT-Based Authentication",
+      "Wallet Flows (Deposit, Withdraw,Bonus, Winnings Transfer)",
+      "Location-Based Compliance",
+      "React.js Admin Panel",
+      "Redis Caching for Performance",
+      "Encryption with Bcrypt & Crypto",
+    ],
+    links: [],
+    tag: "backend",
+    sequence: 7,
+  },
+  {
+    id: "15",
+    name: "Bharat Rummy",
+    description: "End-to-End Backend for Real Money Rummy Platform",
+    detailedDescription: `Bharat Rummy is a standalone real money Rummy application for Indian users, fully developed with backend-first principles. <br /><br />
+  I built the complete backend system, covering: <br />
+  - 💳 **Wallet Management**: Real-time balances & transaction logs. <br />
+  - 🏦 **Payment Gateway Integrations** for deposits, withdrawals, and winnings. <br />
+  - 🧾 **TDS Implementation** ensuring compliance in user transactions. <br />
+  - 🔐 **KYC Workflows** with Aadhaar/PAN for secure onboarding. <br />
+  - ⚡ **Optimized REST APIs** capable of handling high-traffic loads. <br />
+  - 🛡️ **Secure Transactions** with Bcrypt hashing, Crypto encryption, and rate limiting.`,
+    image: backendImageUrl,
+    languagesUsed: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
+    ],
+    isFeatured: true,
+    status: "Live",
+    features: [
+      "End-to-End Backend System",
+      "Wallet with Real-Time Balance & Logs",
+      "Multiple Payment Gateway Integrations",
+      "TDS Compliance for Transactions",
+      "KYC with Aadhaar/PAN",
+      "Optimized REST APIs for High Traffic",
+    ],
+    links: [],
+    tag: "backend",
+    sequence: 9,
+  },
 ];

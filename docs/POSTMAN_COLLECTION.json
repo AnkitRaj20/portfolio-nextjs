@@ -1,0 +1,32 @@
+{
+  "info": {
+    "name": "Portfolio NextJS API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Hashnode Blogs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/hashnode",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "hashnode"]
+        }
+      }
+    },
+    {
+      "name": "Get Hashnode Post",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/hashnode-post",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "hashnode-post"]
+        }
+      }
+    }
+  ]
+}

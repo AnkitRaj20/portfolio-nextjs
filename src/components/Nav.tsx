@@ -20,6 +20,11 @@ const navLinks = [
     icon: "/icons/home.png",
   },
   {
+    label: "TimeLine",
+    route: "/timeline",
+    icon: "/icons/home.png",
+  },
+  {
     label: "Resume",
     route: "/resume",
     icon: "/assets/icons/image.svg",
