@@ -5,6 +5,7 @@ import React from "react";
 import FeaturedProjects from "@/components/FeaturedProjects";
 // import Hero2 from "@/components/Hero2";
 import Hero3 from "@/components/Hero3";
+import Contact from "@/components/Contact";
 
 
 const page = () => {
@@ -16,7 +17,7 @@ const page = () => {
       <About/>
       <Skills />
       <FeaturedProjects />
-    
+      <Contact />
     </div>
   );
 };

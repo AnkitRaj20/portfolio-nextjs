@@ -1,13 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { projectlist } from "@/constants/project";
 import Image from "next/image";
-import React from "react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { MdOutlineKeyboardBackspace } from "react-icons/md";
 
-const Page = ({ params }: any) => {
-  const id = params.id;
+const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
   const project = projectlist.find((p) => p.id === id);
 
   return (
@@ -90,7 +87,7 @@ const Page = ({ params }: any) => {
                 <p
                   className="mt-1 text-sm text-gray-700 dark:text-white"
                   dangerouslySetInnerHTML={{
-                    __html: project?.detailedDescription as string,
+                    __html: (project?.detailedDescription as string) || "",
                   }}
                 ></p>
 
