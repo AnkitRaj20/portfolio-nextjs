@@ -21,7 +21,7 @@ const page = async () => {
       <About content={content?.about} />
       <Skills skills={content?.skills} />
       <FeaturedProjects projects={content?.projects} />
-      <Contact />
+      <Contact content={content?.contact} />
     </div>
   );
 };

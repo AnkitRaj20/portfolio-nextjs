@@ -48,8 +48,13 @@
   "about": {
     "title": "About",
     "heading": "About Me",
-    "description": "I’m a results-driven Full-Stack Developer with a strong focus on building scalable, performance-oriented web applications. I specialize in React, Next.js, Node.js, MongoDB, PHP, and MySQL, and I thrive on transforming complex requirements into clean, maintainable solutions. Currently, I work as a Backend Developer, where I’ve built and optimized enterprise-grade systems — including e-commerce, financial platforms, and microservices-based applications. My role involves creating secure REST APIs, implementing third-party integrations, and ensuring high system reliability and performance. I believe in writing efficient, production-ready code and constantly strive to improve through continuous learning and hands-on experimentation with modern tech stacks. Whether it's building from scratch, scaling systems, or improving UX through thoughtful backend architecture — I'm passionate about delivering value. 🚀 Open to new opportunities — full-time roles or freelance projects. Let’s collaborate to build something exceptional.",
+    "description": "I am a passionate Full-Stack Developer dedicated to building scalable, high-performance web applications. With expertise in Next.js, Node.js, and modern cloud architectures, I transform complex challenges into elegant, user-centric solutions. From designing robust backend systems to crafting immersive frontend experiences, I thrive on innovation and continuous learning. Let's build the future, one line of code at a time.",
     "image": "/images/mine2.jpg"
+  },
+  "contact": {
+    "heading": "Let's Connect",
+    "description": "Have a project in mind or just want to say hi? I'm always open to discussing new ideas, collaborations, and opportunities. Drop me a message and let's create something meaningful together.",
+    "email": "ankit21654@gmail.com"
   },
   "skills": [
     {
