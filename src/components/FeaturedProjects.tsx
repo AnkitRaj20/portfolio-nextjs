@@ -1,17 +1,18 @@
+
 "use client";
-import { projectlist } from "@/constants/project";
+// import { projectlist } from "@/constants/project";
 import React from "react";
 import Card from "./shared/Card";
 import { Button } from "./ui/moving-border";
 import { useRouter } from "next/navigation";
 
-const FeaturedProjects = () => {
+const FeaturedProjects = ({ projects = [] }: { projects?: any[] }) => {
   const router = useRouter();
   const detailsPage = (id: string) => {
     router.push(`/projects/${id}`);
   };
 
-  const filteredProjects = projectlist
+  const filteredProjects = projects
     .filter((p): any => p.isFeatured)
     .filter((project) => project.sequence !== undefined)
     .sort((a, b) => Number(a.sequence) - Number(b.sequence));

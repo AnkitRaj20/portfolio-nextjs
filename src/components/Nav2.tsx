@@ -12,34 +12,29 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import Darkmode from "./Darkmode";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-export default function Nav() {
-  const navItems = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "Timeline",
-      link: "/timeline",
-    },
-    {
-      name: "Projects",
-      link: "/projects",
-    },
-    {
-      name: "Blogs",
-      link: "/blogs",
-    },
-    {
-      name: "Contact",
-      link: "mailto:ankit21654@gmail.com",
-    },
+export default function Nav({ navbarData }: { navbarData?: any }) {
+  const pathname = usePathname();
+  // Fallback if no data provided
+  const navItems = navbarData?.links || [
+    { name: "Home", link: "/" },
+    { name: "Timeline", link: "/timeline" },
+    { name: "Projects", link: "/projects" },
+    { name: "Blogs", "link": "/blogs" },
+    { name: "Contact", link: "mailto:ankit21654@gmail.com" },
   ];
+  
+  const resumeLink = navbarData?.resume?.link || "/resume";
+  const resumeText = navbarData?.resume?.text || "Resume";
+  const logoText = navbarData?.logo?.text || "Ankit.dev";
+  const logoImage = navbarData?.logo?.image || "/images/logo.jpg";
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  if (pathname.startsWith("/admin")) return null;
 
   return (
     <div className="relative w-full">
@@ -47,14 +42,14 @@ export default function Nav() {
         {/* Desktop Navigation */}
         <NavBody>
           <div className="flex items-center gap-2">
-            <NavbarLogo />
+             <NavbarLogo text={logoText} image={logoImage} />
           </div>
           <NavItems items={navItems} />
           <div className="flex items-center gap-2">
             <Darkmode />
-            <Link href="/resume" target="_blank">
+            <Link href={resumeLink} target="_blank">
               <NavbarButton variant="primary" className="hidden lg:block">
-                Resume
+                {resumeText}
               </NavbarButton>
             </Link>
           </div>
@@ -63,7 +58,7 @@ export default function Nav() {
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
-            <NavbarLogo />
+            <NavbarLogo text={logoText} image={logoImage} />
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -74,7 +69,7 @@ export default function Nav() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
-            {navItems.map((item, idx) => (
+            {navItems.map((item: any, idx: number) => (
               <a
                 key={`mobile-link-${idx}`}
                 href={item.link}
@@ -85,9 +80,9 @@ export default function Nav() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4 items-start">
-              <Link href="/resume" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+              <Link href={resumeLink} onClick={() => setIsMobileMenuOpen(false)} className="w-full">
                 <NavbarButton variant="primary" className="w-full">
-                  Resume
+                  {resumeText}
                 </NavbarButton>
               </Link>
               <div className="flex items-center gap-2">
@@ -98,7 +93,6 @@ export default function Nav() {
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-      {/* <DummyContent /> */}
     </div>
   );
 }

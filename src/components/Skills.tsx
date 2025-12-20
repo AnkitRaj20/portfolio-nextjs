@@ -1,10 +1,13 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { MySkills } from "@/constants";
 import Skill from "./Skillitem";
 
-const Skills = () => {
+interface SkillsProps {
+  skills: any[];
+}
+
+const Skills = ({ skills }: SkillsProps) => {
   return (
     <div className="bg-white dark:bg-black py-5">
       <div className="text-center mt-3 ">
@@ -18,7 +21,7 @@ const Skills = () => {
 
      
       <div className="flex items-center justify-center flex-wrap gap-4 sm:max-w-4xl m-auto pb-8">
-        {MySkills.map((s):any => (
+        {skills?.map((s) => (
           <Skill key={s.url} skill={s}  />
         ))}
       </div>

@@ -5,11 +5,11 @@ import {
   motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { Education } from "@/constants/education";
 import { Briefcase, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const Timeline = () => {
+
+export const Timeline = ({ data }: { data: any[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -44,7 +44,7 @@ export const Timeline = () => {
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {Education.map((item, index) => (
+        {data.map((item, index) => (
           <div
             key={index}
             className="flex justify-start pt-10 md:pt-40 md:gap-10"

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav2";
 import Footer from "@/components/Footer";
+import { readContent } from "@/lib/json-cms";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,24 +34,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const content = await readContent();
+
   return (
     <html lang="en">
       <body className={inter.className}>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Nav />
-            {children}
-            <Footer />
-          </ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Nav navbarData={content?.navbar} />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

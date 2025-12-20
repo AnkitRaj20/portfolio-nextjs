@@ -8,15 +8,19 @@ import Hero3 from "@/components/Hero3";
 import Contact from "@/components/Contact";
 
 
-const page = () => {
+import { readContent } from "@/lib/json-cms";
+
+const page = async () => {
+  const content = await readContent();
+
   return (
     <div>
       {/* <Hero /> */}
       {/* <Hero2 /> */}
-      <Hero3 />
-      <About/>
-      <Skills />
-      <FeaturedProjects />
+      <Hero3 content={content?.hero} />
+      <About content={content?.about} />
+      <Skills skills={content?.skills} />
+      <FeaturedProjects projects={content?.projects} />
       <Contact />
     </div>
   );

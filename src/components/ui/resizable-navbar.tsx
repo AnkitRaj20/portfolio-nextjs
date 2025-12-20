@@ -233,20 +233,20 @@ export const MobileNavToggle = ({
 import Link from "next/link";
 import Image from "next/image";
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({ text = "Ankit.dev", image = "/images/logo.jpg" }: { text?: string; image?: string }) => {
   return (
     <Link
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <Image
-        src="/images/logo.jpg"
+        src={image}
         alt="logo"
         width={30}
         height={30}
         className="rounded-full"
       />
-      <span className="font-medium text-black dark:text-white">Ankit.dev</span>
+      <span className="font-medium text-black dark:text-white">{text}</span>
     </Link>
   );
 };

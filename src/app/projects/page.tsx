@@ -1,9 +1,10 @@
-"use client";
 import ProjectGrid from "@/components/ProjectGrid";
 import Link from "next/link";
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
+import { readContent } from "@/lib/json-cms";
 
-const Page = () => {
+const Page = async () => {
+  const content = await readContent();
   return (
     <div className="min-h-screen w-full dark:bg-black bg-white  dark:bg-grid-small-white/[0.4] bg-grid-small-black/[0.2] relative flex justify-center flex-wrap py-8">
 
@@ -25,7 +26,7 @@ const Page = () => {
           </p>
         </div>
 
-        <ProjectGrid />
+        <ProjectGrid projects={content?.projects} />
       </div>
     </div>
   );

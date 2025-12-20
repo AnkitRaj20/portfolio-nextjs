@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import { projectlist } from "@/constants/project";
+import { readContent } from "@/lib/json-cms";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
-  const project = projectlist.find((p) => p.id === id);
+  const content = await readContent();
+  const project = content?.projects.find((p: any) => p.id === id);
 
   return (
     <div className="min-h-screen bg-gradient-to-tr from-indigo-100 via-purple-50 to-teal-100 dark:from-gray-500 dark:via-slate-700 dark:to-zinc-900">
