@@ -11,14 +11,7 @@ import { Button } from "./ui/button";
 
 // With a passion for innovation and continuous learning, I’m always exploring new technologies and methodologies to stay ahead in the ever-evolving tech landscape. Let’s collaborate to build something exceptional!`
 
-const words = `I’m a results-driven Full-Stack Developer with a strong focus on building scalable, performance-oriented web applications. I specialize in React, Next.js, Node.js, MongoDB, PHP, and MySQL, and I thrive on transforming complex requirements into clean, maintainable solutions.
-
-Currently, I work as a Backend Developer, where I’ve built and optimized enterprise-grade systems — including e-commerce, financial platforms, and microservices-based applications. My role involves creating secure REST APIs, implementing third-party integrations, and ensuring high system reliability and performance.
-
-I believe in writing efficient, production-ready code and constantly strive to improve through continuous learning and hands-on experimentation with modern tech stacks. Whether it's building from scratch, scaling systems, or improving UX through thoughtful backend architecture — I'm passionate about delivering value.
-
-🚀 Open to new opportunities — full-time roles or freelance projects.
-Let’s collaborate to build something exceptional.`
+const words = `I'm Ankit Raj, a Full-Stack Developer, particularly specializing in backend development. Passionate about building dynamic and scalable web applications. My expertise spans the MERN stack, Vue.js, Next.js and NuxtJs, with a strong focus on crafting robust backend solutions using Node.js. I excel at designing efficient databases with MongoDB, MySQL, and PostgreSQL. My focus is on creating seamless user experiences and delivering production-ready code that truly shines.`
 export default function About() {
   return (
     <div className="h-full w-full dark:bg-black bg-white  dark:bg-dot-white/[0.3] bg-dot-black/[0.4] relative py-8">
