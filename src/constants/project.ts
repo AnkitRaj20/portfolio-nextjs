@@ -163,26 +163,28 @@ export const projectlist = [
       `YouHired is an AI-powered developer portfolio and resume platform designed to streamline how candidates present themselves and discover relevant job opportunities. <br />
       Built as a modern full-stack application using React, TypeScript, and a fully custom NodeJs backend, the platform enables users to generate structured portfolios and ATS-friendly resumes from a single unified data source. <br />
 
-      Key technical innovations include:
+      Key technical innovations include: <br /> <br />
 
-       - Unified Data Modeling: Designed a centralized profile schema that transforms user input into multiple outputs (portfolio + resume) using a structured transformation layer. <br />
-       - Automated Resume Generation: Implemented an intelligent ResumeViewModel system to generate ATS-optimized resumes with normalized skills, structured sections, and clean formatting. <br />
-       - AI-Assisted Bio Generation: Developed a system that generates personalized bios based on projects, skills, and experience, avoiding generic, prompt-based outputs. <br />
-       - Weekly Job Recommendations: Built a recommendation system that delivers curated job listings based on user profile, skills, and preferences, helping users discover relevant opportunities consistently. <br />
-       - Template-Driven Rendering: Created a flexible template architecture for portfolios and resumes, enabling dynamic layout switching without altering underlying data. <br />
-       - Custom Backend Architecture: Engineered a fully custom backend for handling user data, transformations, and generation pipelines with scalability in mind. <br />
-       - Performance & Deployment: Optimized frontend performance with Vercel deployment, ensuring fast load times and smooth user experience. <br />
-       - GitHub Integration: Integrated GitHub APIs to automatically fetch and showcase projects, improving authenticity and reducing manual effort. <br />
-       - Export & Sharing: Enabled export-ready resumes and shareable portfolio links for seamless distribution. <br />
-       
+        - Unified Data Modeling: Designed a centralized profile schema that transforms user input into multiple outputs (portfolio + resume) using a structured transformation layer. <br />
+        - Automated Resume Generation: Implemented an intelligent ResumeViewModel system to generate ATS-optimized resumes with normalized skills, structured sections, and clean formatting. <br />
+        - AI-Assisted Bio Generation: Developed a system that generates personalized bios based on projects, skills, and experience, avoiding generic, prompt-based outputs. <br />
+        - Weekly Job Recommendations: Built a recommendation system that delivers curated job listings based on user profile, skills, and preferences, helping users discover relevant opportunities consistently. <br />
+        - Template-Driven Rendering: Created a flexible template architecture for portfolios and resumes, enabling dynamic layout switching without altering underlying data. <br />
+        - Custom Backend Architecture: Engineered a fully custom backend for handling user data, transformations, and generation pipelines with scalability in mind. <br />
+        - Performance & Deployment: Optimized frontend performance with Vercel deployment, ensuring fast load times and smooth user experience. <br />
+        - GitHub Integration: Integrated GitHub APIs to automatically fetch and showcase projects, improving authenticity and reducing manual effort. <br />
+        - Export & Sharing: Enabled export-ready resumes and shareable portfolio links for seamless distribution. <br />
+        
       Developed with a focus on efficiency and real-world usability, YouHired simplifies the job application workflow by allowing users to input their data once and generate both a portfolio and resume, while also receiving ongoing job recommendations tailored to their profile.
 
 `,
     image: "/images/youhired.png",
     languagesUsed: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
     ],
     isFeatured: true,
     status: "Live",

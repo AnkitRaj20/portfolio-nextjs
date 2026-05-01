@@ -39,7 +39,7 @@ export const MySkills = [
     name: "TypeScript",
     whiteColor: false
   },
-   {
+  {
     url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     name: "Git",
     whiteColor: false
@@ -103,17 +103,17 @@ export const MySkills = [
     name: "PHP",
     whiteColor: false
   },
-  {
-    url: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/html5/html5-original.svg",
-    name: "HTML5",
-    whiteColor: false
-  },
-  {
-    url: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/css3/css3-original.svg",
-    name: "CSS3",
-    whiteColor: false
-  },
-  
+  // {
+  //   url: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/html5/html5-original.svg",
+  //   name: "HTML5",
+  //   whiteColor: false
+  // },
+  // {
+  //   url: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/css3/css3-original.svg",
+  //   name: "CSS3",
+  //   whiteColor: false
+  // },
+
   {
     url: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mongodb/mongodb-original.svg",
     name: "MongoDB",
