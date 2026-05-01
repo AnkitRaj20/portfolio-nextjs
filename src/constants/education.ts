@@ -1,5 +1,14 @@
 export const Education = [
     {
+      Date: "2025 - Present",
+      title: "Software Developer",
+      School: "LCNC",
+      location: "Noida",
+      description: "Working as a Software Developer",
+      bg: "#F11A7B",
+      type: "work"
+    },
+    {
       Date: "2025 - 2025",
       title: "Software Developer",
       School: "Techbeliever",
