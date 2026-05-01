@@ -123,14 +123,62 @@ const backendImageUrl =
   "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png";
 
 export const projectlist = [
+  // {
+  //   id: "1",
+  //   name: "NayiNaukri",
+  //   description:
+  //     "Online job Platform using Next JS that connect job seekers with employers.",
+  //   detailedDescription:
+  //     "NayiNaukri is an online platform that connect job seekers with employers. These websites provide a centralized location for job postings, allowing individuals to search and apply for jobs in various industries and locations. Job websites have become an essential tool in the job search process, providing convenient access to job opportunities and a means for employers to reach a wide pool of potential candidates.",
+  //   image: "/images/nayinaukri.png",
+  //   languagesUsed: [
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+  //   ],
+  //   isFeatured: true,
+  //   status: "Live",
+  //   features: [
+  //     "Job Post",
+  //     "Job Search",
+  //     "Job Seeker Profile",
+  //     "Job Provider profile",
+  //     "Job Apply",
+  //     "Job Seeker Dashboard",
+  //     "Job Provider Dashboard",
+  //     "Job Seeker profile posting",
+  //   ],
+  //   github: "https://github.com/AnkitRaj20/job-nextjs",
+  //   url: "https://nayinaukri.netlify.app/",
+  //   links: [],
+  //   tag: "fullstack",
+  //   sequence: 1,
+  // },
   {
     id: "1",
-    name: "NayiNaukri",
+    name: "YouHired",
     description:
-      "Online job Platform using Next JS that connect job seekers with employers.",
+      "YouHired is an AI-powered one stop solution for developers, where with the help of github integration they can create portfolio and resume and also get weekly job recommendation according to their education,experience and skills",
     detailedDescription:
-      "NayiNaukri is an online platform that connect job seekers with employers. These websites provide a centralized location for job postings, allowing individuals to search and apply for jobs in various industries and locations. Job websites have become an essential tool in the job search process, providing convenient access to job opportunities and a means for employers to reach a wide pool of potential candidates.",
-    image: "/images/nayinaukri.png",
+      `YouHired is an AI-powered developer portfolio and resume platform designed to streamline how candidates present themselves and discover relevant job opportunities. <br />
+      Built as a modern full-stack application using React, TypeScript, and a fully custom NodeJs backend, the platform enables users to generate structured portfolios and ATS-friendly resumes from a single unified data source. <br />
+
+      Key technical innovations include:
+
+       - Unified Data Modeling: Designed a centralized profile schema that transforms user input into multiple outputs (portfolio + resume) using a structured transformation layer. <br />
+       - Automated Resume Generation: Implemented an intelligent ResumeViewModel system to generate ATS-optimized resumes with normalized skills, structured sections, and clean formatting. <br />
+       - AI-Assisted Bio Generation: Developed a system that generates personalized bios based on projects, skills, and experience, avoiding generic, prompt-based outputs. <br />
+       - Weekly Job Recommendations: Built a recommendation system that delivers curated job listings based on user profile, skills, and preferences, helping users discover relevant opportunities consistently. <br />
+       - Template-Driven Rendering: Created a flexible template architecture for portfolios and resumes, enabling dynamic layout switching without altering underlying data. <br />
+       - Custom Backend Architecture: Engineered a fully custom backend for handling user data, transformations, and generation pipelines with scalability in mind. <br />
+       - Performance & Deployment: Optimized frontend performance with Vercel deployment, ensuring fast load times and smooth user experience. <br />
+       - GitHub Integration: Integrated GitHub APIs to automatically fetch and showcase projects, improving authenticity and reducing manual effort. <br />
+       - Export & Sharing: Enabled export-ready resumes and shareable portfolio links for seamless distribution. <br />
+       
+      Developed with a focus on efficiency and real-world usability, YouHired simplifies the job application workflow by allowing users to input their data once and generate both a portfolio and resume, while also receiving ongoing job recommendations tailored to their profile.
+
+`,
+    image: "/images/youhired.png",
     languagesUsed: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
@@ -139,17 +187,20 @@ export const projectlist = [
     isFeatured: true,
     status: "Live",
     features: [
-      "Job Post",
-      "Job Search",
-      "Job Seeker Profile",
-      "Job Provider profile",
-      "Job Apply",
-      "Job Seeker Dashboard",
-      "Job Provider Dashboard",
-      "Job Seeker profile posting",
+      "GitHub Integration for Project Sync",
+      "ATS Resume Generator",
+      "Portfolio Templates",
+      "Portfolio Analytics",
+      "One-Click Vercel Deploy",
+      "One-Click AI Resume",
+      "Personalized AI Bio Generation from Real Data",
+      "Weekly Job Recommendations",
+      "Custom Backend Architecture",
+      "Full SEO Control",
+      "Export & Sharing"
     ],
-    github: "https://github.com/AnkitRaj20/job-nextjs",
-    url: "https://nayinaukri.netlify.app/",
+    github: "https://github.com/AnkitRaj20/codefolio",
+    url: "https://youhired.vercel.app/",
     links: [],
     tag: "fullstack",
     sequence: 1,
