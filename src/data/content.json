@@ -18,8 +18,8 @@
         "link": "/projects"
       },
       {
-        "name": "Blogs",
-        "link": "/blogs"
+        "name": "",
+        "link": ""
       },
       {
         "name": "Contact",
@@ -34,8 +34,9 @@
   "hero": {
     "name": "Ankit Raj",
     "roles": [
-      "Ankit Raj",
-      "a FullStack Developer"
+      "FullStack Developer",
+      "Node.js Specialist",
+      "System Architect"
     ],
     "cta": {
       "text": "Contact Now",
@@ -48,8 +49,10 @@
   "about": {
     "title": "About",
     "heading": "About Me",
-    "description": "I'm Ankit Raj, a Full-Stack Developer, particularly specializing in backend development. Passionate about building dynamic and scalable web applications. My expertise spans the MERN stack, Vue.js, Next.js and NuxtJs, with a strong focus on crafting robust backend solutions using Node.js. I excel at designing efficient databases with MongoDB, MySQL, and PostgreSQL. My focus is on creating seamless user experiences and delivering production-ready code that truly shines.",
-    "image": "/images/mine2.jpg"
+    "description": "I'm Ankit Raj, a Full-Stack Developer with 2+ years of experience building production web applications — from backend-heavy systems (wallets, KYC, real-time infra) to modern full-stack apps with React, Next.js, and Vue.\n\nMy background started backend-first, and I've since expanded into full-stack development and AI integration in production systems - so I care as much about clean, scalable APIs as I do about the interfaces built on top of them.",
+    "image": "/images/mine2.jpg",
+    "yearsOfExperience": "2+ Years",
+    "specialty": "Full-Stack + AI"
   },
   "contact": {
     "heading": "Let's Connect",
@@ -60,102 +63,172 @@
     {
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
       "name": "NextJS",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Frontend"
     },
     {
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "name": "React",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Frontend"
     },
     {
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
       "name": "Tailwind CSS",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Frontend"
     },
     {
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       "name": "JavaScript",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Frontend"
     },
     {
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
       "name": "TypeScript",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Frontend"
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-      "name": "Git",
-      "whiteColor": false
-    },
-    {
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-      "name": "Python",
-      "whiteColor": false
-    },
-    {
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-      "name": "Java",
-      "whiteColor": false
-    },
-    {
-      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/github/github-original.svg",
-      "name": "GitHub",
-      "whiteColor": false
-    },
-    {
-      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/php/php-original.svg",
-      "name": "PHP",
-      "whiteColor": false
-    },
-    {
-      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/html5/html5-original.svg",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
       "name": "HTML5",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Frontend"
     },
     {
-      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/css3/css3-original.svg",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       "name": "CSS3",
-      "whiteColor": false
-    },
-    {
-      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/nodejs/nodejs-original.svg",
-      "name": "Node Js",
-      "whiteColor": false
-    },
-    {
-      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/express/express-original.svg",
-      "name": "Express Js",
-      "whiteColor": true
-    },
-    {
-      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mongodb/mongodb-original.svg",
-      "name": "MongoDB",
-      "whiteColor": false
-    },
-    {
-      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mysql/mysql-original.svg",
-      "name": "MySQL",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Frontend"
     },
     {
       "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/bootstrap/bootstrap-original.svg",
       "name": "BootStrap",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Frontend"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/nodejs/nodejs-original.svg",
+      "name": "Node Js",
+      "whiteColor": false,
+      "category": "Backend"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/express/express-original.svg",
+      "name": "Express Js",
+      "whiteColor": true,
+      "category": "Backend"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/php/php-original.svg",
+      "name": "PHP",
+      "whiteColor": false,
+      "category": "Backend"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      "name": "Python",
+      "whiteColor": false,
+      "category": "Backend",
+      "isHidden": true
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+      "name": "Java",
+      "whiteColor": false,
+      "category": "Backend",
+      "isHidden": true
     },
     {
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg",
       "name": "Kafka",
-      "whiteColor": true
+      "whiteColor": true,
+      "category": "Backend"
     },
     {
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg",
       "name": "Socket.io",
-      "whiteColor": true
+      "whiteColor": true,
+      "category": "Backend"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mongodb/mongodb-original.svg",
+      "name": "MongoDB",
+      "whiteColor": false,
+      "category": "Databases & Caching"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mysql/mysql-original.svg",
+      "name": "MySQL",
+      "whiteColor": false,
+      "category": "Databases & Caching"
     },
     {
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
       "name": "Redis",
-      "whiteColor": false
+      "whiteColor": false,
+      "category": "Databases & Caching"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+      "name": "Git",
+      "whiteColor": false,
+      "category": "Tools"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/github/github-original.svg",
+      "name": "GitHub",
+      "whiteColor": false,
+      "category": "Tools"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg",
+      "whiteColor": true,
+      "category": "AI Integration"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlegemini.svg",
+      "whiteColor": true,
+      "category": "AI Integration"
+    },
+    {
+      "name": "OpenRouter",
+      "url": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openrouter.svg",
+      "whiteColor": true,
+      "category": "AI Integration"
+    },
+    {
+      "name": "Fastify",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastify/fastify-original.svg",
+      "whiteColor": true,
+      "category": "Backend"
+    },
+    {
+      "name": "PostgreSql",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      "whiteColor": false,
+      "category": "Databases & Caching"
+    },
+    {
+      "name": "Vue JS",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+      "whiteColor": false,
+      "category": "Frontend"
+    },
+    {
+      "name": "Nuxt JS",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxt/nuxt-original.svg",
+      "whiteColor": false,
+      "category": "Frontend"
+    },
+    {
+      "name": "Swagger",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg",
+      "whiteColor": false,
+      "category": "Tools"
     }
   ],
   "timeline": [
@@ -234,45 +307,48 @@
   "projects": [
     {
       "id": "1",
-      "name": "NayiNaukri",
-      "description": "Online job Platform using Next JS that connect job seekers with employers.",
-      "detailedDescription": "NayiNaukri is an online platform that connect job seekers with employers. These websites provide a centralized location for job postings, allowing individuals to search and apply for jobs in various industries and locations. Job websites have become an essential tool in the job search process, providing convenient access to job opportunities and a means for employers to reach a wide pool of potential candidates.",
-      "image": "/images/nayinaukri.png",
+      "name": "YouHired",
+      "description": "YouHired — AI-powered developer portfolio + resume platform. Input your data once, generate an ATS-optimized resume, a live portfolio, and get weekly AI-matched job recommendations — all from one unified profile.",
+      "detailedDescription": "YouHired is an AI-powered developer portfolio and resume platform designed to streamline how candidates present themselves and discover relevant job opportunities.\nBuilt as a modern full-stack application using React, TypeScript, and a fully custom NodeJs backend, the platform enables users to generate structured portfolios and ATS-friendly resumes from a single unified data source.\nKey technical innovations include:\n\n- Unified Data Modeling: Designed a centralized profile schema that transforms user input into multiple outputs (portfolio + resume) using a structured transformation layer.\n- Automated Resume Generation: Implemented an intelligent ResumeViewModel system to generate ATS-optimized resumes with normalized skills, structured sections, and clean formatting.\n- AI-Assisted Bio Generation: Developed a system that generates personalized bios based on projects, skills, and experience, avoiding generic, prompt-based outputs.\n- Weekly Job Recommendations: Built a recommendation system that delivers curated job listings based on user profile, skills, and preferences, helping users discover relevant opportunities consistently.\n- Template-Driven Rendering: Created a flexible template architecture for portfolios and resumes, enabling dynamic layout switching without altering underlying data.\n- Custom Backend Architecture: Engineered a fully custom backend for handling user data, transformations, and generation pipelines with scalability in mind.\n- Performance & Deployment: Optimized frontend performance with Vercel deployment, ensuring fast load times and smooth user experience.\n- GitHub Integration: Integrated GitHub APIs to automatically fetch and showcase projects, improving authenticity and reducing manual effort.\n- Export & Sharing: Enabled export-ready resumes and shareable portfolio links for seamless distribution.\nDeveloped with a focus on efficiency and real-world usability, YouHired simplifies the job application workflow by allowing users to input their data once and generate both a portfolio and resume, while also receiving ongoing job recommendations tailored to their profile.",
+      "image": "/images/youhired.png",
       "languagesUsed": [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/nodejs/nodejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
       ],
       "isFeatured": true,
       "status": "Live",
       "features": [
-        "Job Post",
-        "Job Search",
-        "Job Seeker Profile",
-        "Job Provider profile",
-        "Job Apply",
-        "Job Seeker Dashboard",
-        "Job Provider Dashboard",
-        "Job Seeker profile posting"
+        "GitHub Integration for Project Sync",
+        "ATS Resume Generator",
+        "Portfolio Templates",
+        "Weekly Job Recommendations",
+        "One-Click AI Resume",
+        "Personalized AI Bio Generation from Real Data",
+        "One-Click Vercel Deploy",
+        "Export & Sharing"
       ],
-      "github": "https://github.com/AnkitRaj20/job-nextjs",
-      "url": "https://nayinaukri.netlify.app/",
+      "github": "",
+      "url": "https://youhired.cloud",
       "links": [],
       "tag": "fullstack",
       "sequence": 1
     },
     {
       "id": "2",
-      "name": "RestoreMagic",
-      "description": "SaaS Platform for Image Manipulation using Next JS and Cloudinary API",
-      "detailedDescription": "Particularly adept with RestoreMagic, leveraging Cloudinary API for innovative image manipulation features like Image Restore, Generative Fill, Object Remove, Object Recolor, and Background Remove. Proficient in integrating Stripe for seamless payment processing and Clerk for secure authentication.",
+      "name": "Finoryx",
+      "description": "Finoryx — A personal finance tracker for managing expenses, recurring transactions, and shared group expenses (Splitwise-style). Built to actually replace my own budgeting spreadsheet.",
+      "detailedDescription": "Finoryx — A personal finance tracker for managing expenses, recurring transactions, and shared group expenses (Splitwise-style). Built to actually replace my own budgeting spreadsheet.",
       "image": "/images/restoremagic.png",
       "languagesUsed": [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
       ],
-      "isFeatured": false,
+      "isFeatured": true,
       "status": "Live",
       "features": [
         "Image Restore",
@@ -287,7 +363,7 @@
       "url": "https://restoremagic.vercel.app/",
       "links": [],
       "tag": "fullstack",
-      "sequence": 10
+      "sequence": 2
     },
     {
       "id": "3",
@@ -417,7 +493,7 @@
     {
       "id": "8",
       "name": "EazeAccounts",
-      "description": "Financial Management Application (QuickBooks-Inspired)",
+      "description": "EazeAccounts — a QuickBooks-style accounting platform built for a CA client, handling full US GAAP workflows: balance sheets, income statements, and Chart of Accounts.",
       "detailedDescription": "\n          EazeAccounts is a comprehensive financial management platform designed for Chartered Accountants (CA) to efficiently manage and track financial transactions for individuals and organizations. <br />\n          Inspired by QuickBooks, the platform offers features like bank integration, sales tracking, income and balance sheet management, and detailed financial reporting. <br /><br />\n          With its advanced capabilities, EazeAccounts empowers users to securely manage their financial data, providing seamless transaction tracking and accurate record-keeping. The platform allows users to add and manage multiple bank accounts, track transactions, generate detailed financial reports, and manage income and expense balances with real-time updates.<br /><br />\n          Developed with RESTful APIs for secure and efficient handling of critical financial data, EazeAccounts integrates with Stripe for payment processing, ensuring smooth and frictionless transactions. Additionally, the platform uses Sequelize ORM for optimized data management, handling complex financial queries and ensuring high performance. <br /><br />\n          EazeAccounts is designed to meet the needs of Chartered Accountants and businesses, making it an ideal solution for those looking to streamline their financial management tasks.\n        ",
       "image": "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png",
       "languagesUsed": [
@@ -437,7 +513,7 @@
       ],
       "links": [],
       "tag": "backend",
-      "sequence": 5
+      "sequence": 15
     },
     {
       "id": "9",
@@ -489,7 +565,7 @@
       ],
       "links": [],
       "tag": "backend",
-      "sequence": 4
+      "sequence": 6
     },
     {
       "id": "11",
@@ -519,7 +595,7 @@
       "github": "https://github.com/AnkitRaj20/lms-backend",
       "links": [],
       "tag": "backend",
-      "sequence": 3
+      "sequence": 4
     },
     {
       "id": "12",
@@ -573,7 +649,7 @@
       ],
       "links": [],
       "tag": "backend",
-      "sequence": 2
+      "sequence": 3
     },
     {
       "id": "14",
@@ -587,7 +663,7 @@
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
       ],
-      "isFeatured": true,
+      "isFeatured": false,
       "status": "Live",
       "features": [
         "JWT-Based Authentication",
@@ -599,7 +675,7 @@
       ],
       "links": [],
       "tag": "backend",
-      "sequence": 7
+      "sequence": 173
     },
     {
       "id": "15",
@@ -613,7 +689,7 @@
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
       ],
-      "isFeatured": true,
+      "isFeatured": false,
       "status": "Live",
       "features": [
         "End-to-End Backend System",
@@ -625,7 +701,7 @@
       ],
       "links": [],
       "tag": "backend",
-      "sequence": 9
+      "sequence": 898
     }
   ]
 }

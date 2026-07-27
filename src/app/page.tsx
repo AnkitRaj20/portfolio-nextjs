@@ -16,9 +16,8 @@ const page = async () => {
   return (
     <div>
       {/* <Hero /> */}
-      {/* <Hero2 /> */}
       <Hero3 content={content?.hero} />
-      <About content={content?.about} />
+      <About content={content?.about} projectCount={content?.projects?.length || 0} />
       <Skills skills={content?.skills} />
       <FeaturedProjects projects={content?.projects} />
       <Contact content={content?.contact} />

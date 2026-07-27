@@ -14,7 +14,22 @@ const nextConfig = {
         },
         {
           protocol: 'https',
+          hostname: 'cdn.simpleicons.org',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
           hostname: 'cdn.hashnode.com',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'cdn.jsdelivr.net',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'raw.githubusercontent.com',
           pathname: '/**',
         },
       ],

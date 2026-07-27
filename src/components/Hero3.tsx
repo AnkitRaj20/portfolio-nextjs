@@ -31,8 +31,8 @@ export default function Hero3({ content }: HeroProps) {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-         <h1 className="h-auto text-3xl md:text-7xl font-bold dark:text-white text-center">
-          Hi, I&apos;m
+        <h1 className="h-auto text-3xl md:text-7xl font-bold dark:text-white text-center">
+          Hi, I&apos;m Ankit Raj
           <strong className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 flex items-center justify-center py-8 ">
             <Typewriter
               cursor
@@ -45,14 +45,16 @@ export default function Hero3({ content }: HeroProps) {
             />
           </strong>
         </h1>
-        
-        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-        Ready to collaborate?
+
+        {/* <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
+          FullStack Developer | Node.js Specialist | System Architect
+        </div> */}
+        <div className="font-light text-center text-base md:text-xl lg:text-2xl max-w-2xl mx-auto text-neutral-600 dark:text-neutral-300 py-6 leading-relaxed">
+          Full-Stack Developer crafting modern web apps with React, Next.js,
+          and Node.js — with real-world experience integrating AI into
+          production systems.                
         </div>
-        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-        Let&apos;s build something extraordinary together.
-        </div>
-{/*         <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
+        {/* <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
           Debug now
         </button> */}
         <div className=" py-6 flex items-center justify-center gap-4">

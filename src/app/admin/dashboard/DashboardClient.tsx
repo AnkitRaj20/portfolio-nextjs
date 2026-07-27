@@ -272,6 +272,24 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                                   />
                              </div>
                              <div>
+                                 <label className="mb-1 block text-sm font-medium dark:text-neutral-300">Years of Experience</label>
+                                 <input
+                                    value={content.about.yearsOfExperience || ""}
+                                    onChange={(e) => updateNested(["about", "yearsOfExperience"], e.target.value)}
+                                    className="w-full rounded-md border border-neutral-300 p-2 dark:border-neutral-700 dark:bg-neutral-800"
+                                    placeholder="e.g. 2+ Years"
+                                  />
+                             </div>
+                             <div>
+                                 <label className="mb-1 block text-sm font-medium dark:text-neutral-300">Specialty</label>
+                                 <input
+                                    value={content.about.specialty || ""}
+                                    onChange={(e) => updateNested(["about", "specialty"], e.target.value)}
+                                    className="w-full rounded-md border border-neutral-300 p-2 dark:border-neutral-700 dark:bg-neutral-800"
+                                    placeholder="e.g. Full-Stack + AI"
+                                  />
+                             </div>
+                             <div>
                                  <label className="mb-1 block text-sm font-medium dark:text-neutral-300">Description</label>
                                  <textarea
                                     value={content.about.description}
@@ -335,7 +353,7 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                      <div className="mb-6 flex items-center justify-between">
                          <div className="flex items-center gap-4">
                             <h2 className="text-lg font-semibold dark:text-white">Skills</h2>
-                            <Button onClick={() => setContent((prev:any) => ({...prev, skills: [...prev.skills, { name: "", url: "", whiteColor: false }] }))} size="sm" variant="outline">
+                            <Button onClick={() => setContent((prev:any) => ({...prev, skills: [...(prev.skills || []), { name: "", url: "", whiteColor: false, category: "Frontend" }] }))} size="sm" variant="outline">
                                 <Plus className="mr-2 h-4 w-4" /> Add Skill
                             </Button>
                          </div>
@@ -373,6 +391,22 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                                         }}
                                         className="w-full border-b bg-transparent p-1 text-xs text-neutral-500 outline-none" 
                                       />
+                                      <select
+                                        value={skill.category || "Frontend"}
+                                        onChange={(e) => {
+                                            const newSkills = [...content.skills];
+                                            newSkills[idx].category = e.target.value;
+                                            setContent((prev:any) => ({...prev, skills: newSkills}));
+                                        }}
+                                        className="w-full border-b bg-transparent p-1 text-xs text-neutral-500 outline-none"
+                                      >
+                                        <option value="Frontend">Frontend</option>
+                                        <option value="Backend">Backend</option>
+                                        <option value="Databases & Caching">Databases & Caching</option>
+                                        <option value="AI Integration">AI Integration</option>
+                                        <option value="Tools">Tools</option>
+                                        <option value="Other">Other</option>
+                                      </select>
                                       <div className="flex items-center gap-2">
                                           <input 
                                             type="checkbox" 
@@ -384,6 +418,18 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                                             }}
                                           />
                                           <span className="text-xs text-neutral-500">White Background?</span>
+                                      </div>
+                                      <div className="flex items-center gap-2">
+                                          <input 
+                                            type="checkbox" 
+                                            checked={skill.isHidden || false} 
+                                            onChange={(e) => {
+                                                const newSkills = [...content.skills];
+                                                newSkills[idx].isHidden = e.target.checked;
+                                                setContent((prev:any) => ({...prev, skills: newSkills}));
+                                            }}
+                                          />
+                                          <span className="text-xs text-neutral-500">Hide Skill?</span>
                                       </div>
                                  </div>
                              </div>

@@ -12,7 +12,11 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  // Replace literal '\n' and actual newlines with a unique token surrounded by spaces
+  // so it gets split properly.
+  const processedWords = words.replace(/\\n/g, ' \n ').replace(/\n/g, ' \n ');
+  let wordsArray = processedWords.split(" ").filter((word) => word.length > 0 || word === "\n");
+
   useEffect(() => {
     animate(
       "span",
@@ -30,6 +34,9 @@ export const TextGenerateEffect = ({
     return (
       <motion.div ref={scope}>
         {wordsArray.map((word, idx) => {
+          if (word === "\n") {
+            return <br key={`br-${idx}`} />;
+          }
           return (
             <motion.span
               key={word + idx}
