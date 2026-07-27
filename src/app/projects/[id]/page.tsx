@@ -9,158 +9,111 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const project = content?.projects.find((p: any) => p.id === id);
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-indigo-100 via-purple-50 to-teal-100 dark:from-gray-500 dark:via-slate-700 dark:to-zinc-900">
-      <div className="flex justify-between flex-col lg:flex-row gap-7">
-        <a
-          href={project?.url!}
-          target="_blank"
-          className="text-2xl mx-8 mt-12 sm:text-3xl font-bold"
-        >
-          {project?.name}
-        </a>
-        <div className="flex gap-3 mx-8 mt-12 ">
-          {project?.url && (
-            <a target="_blank" href={project?.url}>
-              <Button variant="primary" size="sm">
-                Visit Live
-              </Button>
-            </a>
-          )}
-
-          {project?.github && (
-            <a target="_blank" href={project?.github}>
-              <Button variant="secondary" size="sm">
-                Repository
-              </Button>
-            </a>
-          )}
-        </div>
-      </div>
-      <div className=" dark:text-gray-100 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 rounded-xl m-4 p-4 sm:p-6 lg:p-8">
-        <div className="m-4 sm:m-12 rounded-lg  p-4 ">
-          <img
-            alt={project?.name}
-            src={project?.image}
-            className="h-60 w-full ring ring-indigo-50 dark:ring-slate-600 rounded-lg"
-          />
-
-          <p className="opacity-50 text-sm mt-4 mb-2 dark:opacity-100">
-            Technology Used
-          </p>
-          {project?.languagesUsed.map((btn: any, i: any) => (
-            <Button
-              key={i}
-              variant="ghost"
-              size="icon"
+    <div className="min-h-screen pt-28 pb-12 bg-gradient-to-tr from-indigo-100 via-purple-50 to-teal-100 dark:from-gray-500 dark:via-slate-700 dark:to-zinc-900">
+      <div className="dark:text-gray-100 grid grid-cols-1 gap-8 lg:grid-cols-3 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Left Column: Title, Buttons, Image, Tech */}
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
+            <a
+              href={project?.url!}
+              target="_blank"
+              className="text-3xl sm:text-4xl font-bold hover:underline"
             >
-              <Image
-                src={btn}
-                alt="icon"
-                width={30}
-                height={30}
-                className="h-4 w-4"
-              />
-            </Button>
-          ))}
+              {project?.name}
+            </a>
+            <div className="flex flex-wrap gap-3">
+              {project?.url && (
+                <a target="_blank" href={project?.url}>
+                  <Button variant="primary" size="sm">
+                    Visit Live
+                  </Button>
+                </a>
+              )}
+
+              {project?.github && (
+                <a target="_blank" href={project?.github}>
+                  <Button variant="secondary" size="sm">
+                    Repository
+                  </Button>
+                </a>
+              )}
+            </div>
+          </div>
+
+          <div className="rounded-xl p-4 sm:p-6 ring ring-indigo-50 dark:ring-slate-600 bg-white/40 dark:bg-black/20 backdrop-blur-sm">
+            <img
+              alt={project?.name}
+              src={project?.image}
+              className="h-60 w-full ring ring-indigo-50 dark:ring-slate-600 rounded-lg object-contain bg-white dark:bg-zinc-800"
+            />
+
+            <p className="opacity-50 text-sm mt-6 mb-3 dark:opacity-100 font-medium">
+              Technology Used
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {project?.languagesUsed.map((btn: any, i: any) => (
+                <Button
+                  key={i}
+                  variant="ghost"
+                  size="icon"
+                  className="bg-white/50 dark:bg-white/10 hover:bg-white dark:hover:bg-white/20"
+                >
+                  <Image
+                    src={btn}
+                    alt="icon"
+                    width={30}
+                    height={30}
+                    className="h-5 w-5"
+                  />
+                </Button>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="m-4 sm:m-12  rounded-lg h-auto lg:col-span-2">
-          {/* TODO: Change ring-red-500 to ring-indigo-50 */}
-
-          <article className="rounded-xl  p-4 ring ring-indigo-50 dark:ring-slate-600 sm:p-6 lg:p-8">
+        {/* Right Column: Details */}
+        <div className="lg:col-span-2 h-full">
+          <article className="rounded-xl p-6 sm:p-8 ring ring-indigo-50 dark:ring-slate-600 h-full bg-white/40 dark:bg-black/20 backdrop-blur-sm">
             <div className="flex items-start sm:gap-8">
-              <div>
+              <div className="w-full">
                 <strong className="rounded border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-                  {project?.tag.toUpperCase()}
+                  {project?.tag?.toUpperCase()}
                 </strong>
 
-                <h3 className="mt-4 text-lg font-medium sm:text-xl">
-                  <a
-                    href={project?.url!}
-                    target="_blank"
-                    className="hover:underline "
-                  >
-                    {project?.name}
-                  </a>
-                </h3>
+                {/* Removed duplicate title from here since it's now prominently on the left */}
 
-                <p
-                  className="mt-1 text-sm text-gray-700 dark:text-white"
+                <div
+                  className="mt-6 text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: (project?.detailedDescription as string) || "",
                   }}
-                ></p>
+                ></div>
 
-                <p className="opacity-50 text-sm mt-5">Status</p>
-
-                <div className="flex items-center gap-2">
-                  <div className="w-[10px] h-[10px] rounded-full bg-[#50E3C2]"></div>
-                  <p>{project?.status}</p>
+                <div className="mt-8">
+                  <p className="opacity-50 text-sm mb-2 font-medium">Status</p>
+                  <div className="flex items-center gap-2">
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#50E3C2]"></div>
+                    <p className="font-medium">{project?.status}</p>
+                  </div>
                 </div>
 
-                <p className="opacity-50 text-sm mt-4 mb-2">Features</p>
-                <ul>
-                  {project?.features.map((feature: any, i: any) => (
-                    <li key={i} className="mb-2">
-                      {`${i + 1}`}. {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* <div className="mt-4 sm:flex sm:items-center sm:gap-2">
-                  <div className="flex items-center gap-1 text-gray-500">
-                    <svg
-                      className="h-4 w-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      ></path>
-                    </svg>
-
-                    <p className="text-xs font-medium">48:32 minutes</p>
-                  </div>
-
-                  <span className="hidden sm:block" aria-hidden="true">
-                    &middot;
-                  </span>
-
-                  <p className="mt-2 text-xs font-medium text-gray-500 sm:mt-0">
-                    Featuring{" "}
-                    <a href="#" className="underline hover:text-gray-700">
-                      Barry
-                    </a>
-                    ,
-                    <a href="#" className="underline hover:text-gray-700">
-                      Sandra
-                    </a>{" "}
-                    and
-                    <a href="#" className="underline hover:text-gray-700">
-                      August
-                    </a>
-                  </p>
-                </div> */}
+                <div className="mt-8">
+                  <p className="opacity-50 text-sm mb-3 font-medium">Features</p>
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-200">
+                    {project?.features.map((feature: any, i: any) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="font-medium text-indigo-500 dark:text-indigo-400">{i + 1}.</span> 
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </article>
         </div>
       </div>
-      {/* <div className=" dark:text-gray-100 rounded-xl mx-4 my-2  p-4 ring ring-indigo-50 sm:p-6 lg:p-8">
-        <p className="opacity-50 text-sm mt-4 mb-2">Features</p>
-        <ul>
-          {project?.features.map((feature: any, i: any) => (
-            <li key={i} className="mb-2">
-              {`${i + 1}`}. {feature}
-            </li>
-          ))}
-        </ul>
-      </div> */}
     </div>
   );
 };
