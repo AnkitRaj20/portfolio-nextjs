@@ -18,10 +18,6 @@
         "link": "/projects"
       },
       {
-        "name": "",
-        "link": ""
-      },
-      {
         "name": "Contact",
         "link": "mailto:ankit21654@gmail.com"
       }
@@ -308,9 +304,12 @@
     {
       "id": "1",
       "name": "YouHired",
-      "description": "YouHired — AI-powered developer portfolio + resume platform. Input your data once, generate an ATS-optimized resume, a live portfolio, and get weekly AI-matched job recommendations — all from one unified profile.",
-      "detailedDescription": "YouHired is an AI-powered developer portfolio and resume platform designed to streamline how candidates present themselves and discover relevant job opportunities.\nBuilt as a modern full-stack application using React, TypeScript, and a fully custom NodeJs backend, the platform enables users to generate structured portfolios and ATS-friendly resumes from a single unified data source.\nKey technical innovations include:\n\n- Unified Data Modeling: Designed a centralized profile schema that transforms user input into multiple outputs (portfolio + resume) using a structured transformation layer.\n- Automated Resume Generation: Implemented an intelligent ResumeViewModel system to generate ATS-optimized resumes with normalized skills, structured sections, and clean formatting.\n- AI-Assisted Bio Generation: Developed a system that generates personalized bios based on projects, skills, and experience, avoiding generic, prompt-based outputs.\n- Weekly Job Recommendations: Built a recommendation system that delivers curated job listings based on user profile, skills, and preferences, helping users discover relevant opportunities consistently.\n- Template-Driven Rendering: Created a flexible template architecture for portfolios and resumes, enabling dynamic layout switching without altering underlying data.\n- Custom Backend Architecture: Engineered a fully custom backend for handling user data, transformations, and generation pipelines with scalability in mind.\n- Performance & Deployment: Optimized frontend performance with Vercel deployment, ensuring fast load times and smooth user experience.\n- GitHub Integration: Integrated GitHub APIs to automatically fetch and showcase projects, improving authenticity and reducing manual effort.\n- Export & Sharing: Enabled export-ready resumes and shareable portfolio links for seamless distribution.\nDeveloped with a focus on efficiency and real-world usability, YouHired simplifies the job application workflow by allowing users to input their data once and generate both a portfolio and resume, while also receiving ongoing job recommendations tailored to their profile.",
+      "description": "YouHired turns your GitHub profile and work history into a live portfolio and an ATS-optimized resume — from one unified profile. AI generates your bio from your real projects, not generic prompts, and you get weekly job matches based on your actual skills.",
+      "detailedDescription": "YouHired is an AI-powered developer portfolio and resume platform built to solve a real problem: developers rebuild the same information<br /> — projects, skills, experience <br />— separately for every portfolio, resume, and job application. <br />YouHired centralizes it into one profile and generates everything else from that single source.\n<br /><br />\nThe platform is built as two coordinated applications <br />— a Next.js marketing site and a full MERN-stack dashboard app <br />— sharing one backend for data, transformations, and generation.\n<br /><br />\nHow it works:<br />\nA user connects their GitHub and fills out a structured profile once. From that single data source, YouHired generates a live portfolio, an ATS-optimized resume, and an AI-written bio grounded in the user's actual project history — not generic filler text. A recommendation engine then surfaces weekly job matches based on the user's real skills and preferences, and everything<br /> — portfolio and resume alike<br /> — can be exported or shared with one link.\n<br /><br />\nWhat I built:\n<br />\nA centralized profile schema that transforms one data source into multiple structured outputs (portfolio + resume)<br />\nA resume-generation pipeline that normalizes skills and formatting into ATS-friendly output<br />\nAn AI bio generator that pulls from the user's real projects/skills instead of generic prompting<br />\nA weekly job-recommendation system matched to user profile data<br />\nA template-driven rendering layer so layouts can change without touching underlying data<br />\nGitHub API integration to auto-sync and display real project history",
       "image": "/images/youhired.png",
+      "images": [
+        "/images/youhired.png"
+      ],
       "languagesUsed": [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
@@ -322,14 +321,15 @@
       "isFeatured": true,
       "status": "Live",
       "features": [
-        "GitHub Integration for Project Sync",
+        "GitHub Project Sync",
         "ATS Resume Generator",
         "Portfolio Templates",
         "Weekly Job Recommendations",
-        "One-Click AI Resume",
-        "Personalized AI Bio Generation from Real Data",
+        "One-Click AI Resume Generation",
+        "AI Bio Generation From Real Profile Data",
         "One-Click Vercel Deploy",
-        "Export & Sharing"
+        "Export & Sharing",
+        "Razorpay for Accepting Payment"
       ],
       "github": "",
       "url": "https://youhired.cloud",
@@ -340,27 +340,27 @@
     {
       "id": "2",
       "name": "Finoryx",
-      "description": "Finoryx — A personal finance tracker for managing expenses, recurring transactions, and shared group expenses (Splitwise-style). Built to actually replace my own budgeting spreadsheet.",
-      "detailedDescription": "Finoryx — A personal finance tracker for managing expenses, recurring transactions, and shared group expenses (Splitwise-style). Built to actually replace my own budgeting spreadsheet.",
+      "description": "Finoryx is a personal finance tracker for managing everyday expenses, recurring transactions, and shared costs with others — built to replace my own budgeting spreadsheet. Tracks spending patterns, automates recurring bills, and splits group expenses, Splitwise-style.",
+      "detailedDescription": "Finoryx started as a personal need: spreadsheets weren't cutting it for tracking recurring bills, shared expenses with friends, and actual spending patterns over time. I built it as a full-stack personal finance platform that handles all three in one place.\n<br /><br />\nThe core is a dashboard that tracks monthly budgets, account balances, and spending against a set budget target in real time. Recurring transactions <br />— daily, weekday-only, monthly, or yearly <br />— are automatically processed on schedule rather than requiring manual entry every time, and a group expense feature lets shared costs (rent splits, group purchases, utilities) be tracked and settled the way Splitwise handles shared expenses.\n<br /><br />\nWhat I built:\n<br />\nA recurring-transaction engine supporting custom schedules (daily, Mon–Fri, monthly, yearly) with automatic daily processing<br />\nAn expense analytics layer with category breakdowns, spending trend charts, and period-over-period comparisons<br />\nA group expense system for splitting and settling shared costs among multiple people<br />\nA transactions table with search, filtering, and CSV export/import<br />\nA quick-add expense flow supporting natural-language input (e.g. typing \"800 petrol from HDFC yesterday\" and having it parsed automatically)",
       "image": "/images/restoremagic.png",
       "languagesUsed": [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devihttps://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svgcons/devicon@latest/icons/nextjs/nextjs-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/nodejs/nodejs-original.svg"
       ],
       "isFeatured": true,
       "status": "Live",
       "features": [
-        "Image Restore",
-        "Generative Fill",
-        "Object Remove",
-        "Object Recolor",
-        "Background Remove",
-        "Clerk for secure authentication",
-        "Stripe for accepting payment"
+        "Recurring transactions (daily/5 days/ 6 days /monthly/yearly)",
+        "Expense analytics and spending trends",
+        "Group expense splitting",
+        "Natural-language quick-add expense",
+        "Transaction search, filter, export/import",
+        "Multi-account tracking"
       ],
-      "github": "https://github.com/AnkitRaj20/RestoreMagic",
-      "url": "https://restoremagic.vercel.app/",
+      "github": "",
+      "url": "https://finoryx.vercel.app",
       "links": [],
       "tag": "fullstack",
       "sequence": 2
@@ -629,8 +629,8 @@
     {
       "id": "13",
       "name": "Khiladi Adda",
-      "description": "Real Money Gaming Platform with Wallet & Compliance Systems",
-      "detailedDescription": "Khiladi Adda is a flagship real money gaming (RMG) application where users can register, complete KYC, deposit funds, play games, and withdraw winnings. <br /><br />\n  Built with Node.js, Express.js, and MongoDB/PostgreSQL, the platform ensures compliance and scalability while handling high-traffic gaming operations. It has multiple Games <br /><br />\n  Key highlights include: <br />\n  - 🔐 **KYC Workflows**: Aadhaar/PAN updation with secure onboarding. <br />\n  - 💳 **Wallet System**: Real-time balance updates and transaction logs. <br />\n  - ⚡ **Optimized APIs**: Batch processing reduced latency by 40%, Redis caching achieved ~4–5 ms responses. <br />\n  - 📊 **Google Sheets Streaming**: Replaced Excel exports, saving ~₹1 Lakh infra cost and supporting 1+ lakh records. <br />\n  - 🎮 ** Multiple Games**: It has multiple games like Ludo , Rummy , Ludo Tournament , Cricket Tournament etc. <br />\n  - 🔐 **Security**: Password hashing (Bcrypt), encryption (Crypto), rate limiting for integrations.",
+      "description": "Khiladi Adda is a real-money gaming ecosystem (Ludo, Rummy, tournaments) with secure KYC onboarding, real-time wallets, and compliance-safe payment flows — built to handle high-traffic gaming operations at scale.",
+      "detailedDescription": "Khiladi Adda is a real-money gaming (RMG) platform supporting multiple games — Ludo, Rummy, Ludo Tournament, Cricket Tournament — with the full compliance and financial infrastructure real-money apps require: KYC onboarding, wallet management, and region-aware legal compliance.\n<br/><br/>\nI worked across the platform's backend and its Rummy-specific product line (RummyAdda), plus a standalone sibling app (Bharat Rummy) built entirely backend-first. Across these, I handled everything from onboarding and wallets to performance optimization at scale.\n<br/><br/>\nUser-facing systems:\n<br/>\nKYC onboarding — Aadhaar/PAN verification workflows for secure user registration <br/>\nWallet system — real-time balance updates, deposits, withdrawals, and winnings transfers, with full transaction logs <br/>\nLocation-based compliance — auto-detects a user's state/country via IP to enforce region-specific gaming rules <br/>\nTDS compliance — automated tax deduction handling on winnings, per Indian regulations <br/>\nMultiple payment gateway integrations for deposits and withdrawals\n<br/><br/>\nPerformance and infrastructure:\n<br/>\nBatch API processing cut latency by 40%; Redis caching brought response times down to ~4-5ms\n<br/>\nReplaced manual Excel exports with a Google Sheets streaming pipeline, supporting 100,000+ records and saving roughly ₹1 lakh in infrastructure costs\n<br/>\nBuilt and optimized REST APIs to handle high-traffic gaming loads without degradation\n<br/><br/>\nSecurity:\n<br/>\nPassword hashing (Bcrypt) and data encryption (Crypto) across all three applications<br/>\nRate limiting on external integrations and sensitive endpoints<br/>\nJWT-based authentication across user sessions<br/>\n<br/><br/>\nI also contributed to the React.js-based admin panel used for real-time platform monitoring.",
       "image": "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png",
       "languagesUsed": [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
@@ -641,11 +641,14 @@
       "isFeatured": true,
       "status": "Live",
       "features": [
-        "User Registration & KYC",
-        "Wallet Management",
-        "Multiple Payment Gateways",
-        "Batch API Processing & Redis Caching",
-        "Google Sheets Streaming for Large Data"
+        "KYC onboarding (Aadhaar/PAN)",
+        "Real-time wallet system (deposits, withdrawals, winnings)",
+        "Location-based compliance (IP-based region detection)",
+        "TDS compliance for transactions",
+        "Multiple payment gateway integrations",
+        "Redis caching + batch API optimization (40% latency reduction)",
+        "Google Sheets streaming for large-scale data export",
+        "JWT authentication, Bcrypt/Crypto security, rate limiting"
       ],
       "links": [],
       "tag": "backend",

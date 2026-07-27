@@ -26,7 +26,7 @@ const ProjectGrid = ({ projects = [] }: { projects?: any[] }) => {
             <Card
               id={project.id}
               name={project.name}
-              description={project.detailedDescription}
+              description={project.description}
               languagesUsed={project.languagesUsed}
               github={project.github}
               url={project.url}

@@ -42,11 +42,24 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           </div>
 
           <div className="rounded-xl p-4 sm:p-6 ring ring-indigo-50 dark:ring-slate-600 bg-white/40 dark:bg-black/20 backdrop-blur-sm">
-            <img
-              alt={project?.name}
-              src={project?.image}
-              className="h-60 w-full ring ring-indigo-50 dark:ring-slate-600 rounded-lg object-contain bg-white dark:bg-zinc-800"
-            />
+            {project?.images && project.images.length > 0 ? (
+              <div className="flex w-full gap-4 overflow-x-auto snap-x snap-mandatory pb-4 hide-scrollbar">
+                {project.images.map((img: string, idx: number) => (
+                  <img
+                    key={idx}
+                    alt={`${project?.name} - Image ${idx + 1}`}
+                    src={img}
+                    className="h-60 w-[95%] sm:w-[90%] flex-none snap-center ring ring-indigo-50 dark:ring-slate-600 rounded-lg object-contain bg-white dark:bg-zinc-800"
+                  />
+                ))}
+              </div>
+            ) : (
+              <img
+                alt={project?.name}
+                src={project?.image}
+                className="h-60 w-full ring ring-indigo-50 dark:ring-slate-600 rounded-lg object-contain bg-white dark:bg-zinc-800"
+              />
+            )}
 
             <p className="opacity-50 text-sm mt-6 mb-3 dark:opacity-100 font-medium">
               Technology Used

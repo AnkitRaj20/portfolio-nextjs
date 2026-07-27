@@ -468,9 +468,10 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                <div>
                  <h3 className="mb-2 font-medium dark:text-neutral-200">Links</h3>
                  {content.navbar.links.map((link: any, idx: number) => (
-                    <div key={idx} className="mb-2 flex gap-2">
+                    <div key={idx} className="mb-2 flex items-center gap-2">
                        <input 
                           value={link.name} 
+                          placeholder="Name (e.g. Home)"
                           onChange={(e) => {
                              const newLinks = [...content.navbar.links];
                              newLinks[idx].name = e.target.value;
@@ -480,6 +481,7 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                         />
                          <input 
                           value={link.link} 
+                          placeholder="URL (e.g. /#home)"
                           onChange={(e) => {
                              const newLinks = [...content.navbar.links];
                              newLinks[idx].link = e.target.value;
@@ -487,8 +489,30 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                           }}
                           className="w-2/3 rounded-md border border-neutral-300 p-2 dark:border-neutral-700 dark:bg-neutral-800"
                         />
+                        <Button 
+                          variant="ghost" 
+                          size="icon" 
+                          onClick={() => {
+                             const newLinks = content.navbar.links.filter((_: any, i: number) => i !== idx);
+                             updateNavbar("links", newLinks);
+                          }}
+                          className="shrink-0 text-red-500 hover:text-red-700"
+                        >
+                          <X className="h-4 w-4" />
+                        </Button>
                     </div>
                  ))}
+                 <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => {
+                       const newLinks = [...content.navbar.links, { name: "", link: "" }];
+                       updateNavbar("links", newLinks);
+                    }}
+                    className="mt-2"
+                 >
+                    <Plus className="mr-2 h-4 w-4" /> Add Link
+                 </Button>
                </div>
                 <div className="flex justify-end pt-4">
                    <Button onClick={handleSave} disabled={saving}>
@@ -789,6 +813,31 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                                                 className="w-full rounded-md border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-800"
                                             />
                                             <Button variant="ghost" size="icon" onClick={() => removeArrayItem(idx, "features", fIdx)} className="h-9 w-9 shrink-0 text-neutral-400 hover:text-red-500">
+                                                <X className="h-4 w-4" />
+                                            </Button>
+                                        </div>
+                                    ))}
+                                </div>
+                             </div>
+
+                             {/* Gallery Images */}
+                             <div className="rounded-lg border border-neutral-200 p-4 dark:border-neutral-800">
+                                <div className="mb-2 flex items-center justify-between">
+                                    <label className="text-sm font-medium dark:text-neutral-300">Gallery Images (Carousel)</label>
+                                    <Button variant="outline" size="sm" onClick={() => addArrayItem(idx, "images")}>
+                                        <Plus className="mr-1 h-3 w-3" /> Add
+                                    </Button>
+                                </div>
+                                <div className="space-y-2">
+                                    {project.images?.map((img: string, iIdx: number) => (
+                                        <div key={iIdx} className="flex gap-2">
+                                            <input
+                                                value={img}
+                                                placeholder="/images/example.png"
+                                                onChange={(e) => updateArrayField(idx, "images", iIdx, e.target.value)}
+                                                className="w-full rounded-md border border-neutral-300 p-2 text-sm dark:border-neutral-700 dark:bg-neutral-800"
+                                            />
+                                            <Button variant="ghost" size="icon" onClick={() => removeArrayItem(idx, "images", iIdx)} className="h-9 w-9 shrink-0 text-neutral-400 hover:text-red-500">
                                                 <X className="h-4 w-4" />
                                             </Button>
                                         </div>
