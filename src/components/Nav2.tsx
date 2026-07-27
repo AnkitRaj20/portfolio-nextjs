@@ -15,6 +15,7 @@ import Darkmode from "./Darkmode";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 export default function Nav({ navbarData }: { navbarData?: any }) {
   const pathname = usePathname();
@@ -67,16 +68,22 @@ export default function Nav({ navbarData }: { navbarData?: any }) {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
-            {navItems.map((item: any, idx: number) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
-            ))}
+            {navItems.map((item: any, idx: number) => {
+              const isActive = pathname === item.link || (item.link !== "/" && pathname?.startsWith(item.link));
+              return (
+                <a
+                  key={`mobile-link-${idx}`}
+                  href={item.link}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "relative text-neutral-600 dark:text-neutral-300 transition-colors",
+                    isActive && "text-teal-500 dark:text-teal-400 font-semibold"
+                  )}
+                >
+                  <span className="block">{item.name}</span>
+                </a>
+              );
+            })}
             <div className="flex w-full flex-col gap-4 items-start">
               <NavbarButton href={resumeLink} target="_blank" onClick={() => setIsMobileMenuOpen(false)} variant="primary" className="w-full">
                 {resumeText}
