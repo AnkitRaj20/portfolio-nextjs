@@ -1,17 +1,18 @@
+
 "use client";
-import { projectlist } from "@/constants/project";
+// import { projectlist } from "@/constants/project";
 import React from "react";
 import Card from "./shared/Card";
-import { Button } from "./ui/moving-border";
+import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 
-const FeaturedProjects = () => {
+const FeaturedProjects = ({ projects = [] }: { projects?: any[] }) => {
   const router = useRouter();
   const detailsPage = (id: string) => {
     router.push(`/projects/${id}`);
   };
 
-  const filteredProjects = projectlist
+  const filteredProjects = projects
     .filter((p): any => p.isFeatured)
     .filter((project) => project.sequence !== undefined)
     .sort((a, b) => Number(a.sequence) - Number(b.sequence));
@@ -45,12 +46,11 @@ const FeaturedProjects = () => {
 
       <div className="flex item-center justify-center my-8 ">
         <Button
-          borderRadius="1.75rem"
-          className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 max-w-lg text-center mx-auto "
+          variant="primary"
+          size="lg"
           onClick={() => router.push("/projects")}
         >
-          {" "}
-          Show All Project
+          Show All Projects
         </Button>
       </div>
     </div>

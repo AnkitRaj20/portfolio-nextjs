@@ -1,10 +1,10 @@
 "use client";
 import Card from "@/components/shared/Card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { projectlist } from "@/constants/project";
+
 import { useRouter } from "next/navigation";
 
-const ProjectGrid = () => {
+const ProjectGrid = ({ projects = [] }: { projects?: any[] }) => {
   const router = useRouter();
 
   const detailsPage = (id: string) => {
@@ -12,7 +12,7 @@ const ProjectGrid = () => {
   };
 
   const renderProjects = (filterTag: string | null = null) => {
-    const filteredProjects = projectlist
+    const filteredProjects = projects
       .filter((project) => {
         return filterTag ? project.tag === filterTag : true;
       })

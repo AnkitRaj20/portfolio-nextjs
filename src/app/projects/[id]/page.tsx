@@ -1,14 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import { projectlist } from "@/constants/project";
+import { readContent } from "@/lib/json-cms";
 import Image from "next/image";
-import React from "react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { MdOutlineKeyboardBackspace } from "react-icons/md";
 
-const Page = ({ params }: any) => {
-  const id = params.id;
-  const project = projectlist.find((p) => p.id === id);
+const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  const content = await readContent();
+  const project = content?.projects.find((p: any) => p.id === id);
 
   return (
     <div className="min-h-screen bg-gradient-to-tr from-indigo-100 via-purple-50 to-teal-100 dark:from-gray-500 dark:via-slate-700 dark:to-zinc-900">
@@ -23,7 +21,7 @@ const Page = ({ params }: any) => {
         <div className="flex gap-3 mx-8 mt-12 ">
           {project?.url && (
             <a target="_blank" href={project?.url}>
-              <Button className="opacity-90" size={"sm"}>
+              <Button variant="primary" size="sm">
                 Visit Live
               </Button>
             </a>
@@ -31,7 +29,7 @@ const Page = ({ params }: any) => {
 
           {project?.github && (
             <a target="_blank" href={project?.github}>
-              <Button size={"sm"} variant="outline" className="border-2">
+              <Button variant="secondary" size="sm">
                 Repository
               </Button>
             </a>
@@ -52,8 +50,7 @@ const Page = ({ params }: any) => {
           {project?.languagesUsed.map((btn: any, i: any) => (
             <Button
               key={i}
-              className="text-lg px-2 bg-zinc-100 rounded-md w-fit mx-2 hover:bg-teal-400"
-              variant="outline"
+              variant="ghost"
               size="icon"
             >
               <Image
@@ -90,7 +87,7 @@ const Page = ({ params }: any) => {
                 <p
                   className="mt-1 text-sm text-gray-700 dark:text-white"
                   dangerouslySetInnerHTML={{
-                    __html: project?.detailedDescription as string,
+                    __html: (project?.detailedDescription as string) || "",
                   }}
                 ></p>
 

@@ -3,7 +3,7 @@ import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
-import { Button } from "./ui/moving-border";
+import { Button } from "./ui/button";
 const Hero2 = () => {
   return (
     <div className='h-screen w-screen bg-gradient-to-l from-gray-200 via-blue-100 to-stone-100'>
@@ -28,28 +28,25 @@ const Hero2 = () => {
         <p className="mt-4 text-2xl font-normal  text-neutral-300 max-w-lg text-center mx-auto">
           Let&apos;s build something extraordinary together.
         </p>
-        <div className=" py-6 flex items-center justify-center">
+        <div className=" py-6 flex items-center justify-center gap-4">
           <Link href={"/"}>
-            <Button
-              borderRadius="1.75rem"
-              className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 max-w-lg text-center mx-auto "
-            >
+            <Button variant="primary" size="lg">
               Contact Now
             </Button>
           </Link>
 
-          <Link href={"/"} className="mx-6">
-            <button className="inline-flex h-16 animate-shimmer items-center justify-center border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 rounded-full">
+          <Link href={"/"}>
+            <Button variant="secondary" size="lg" className="flex items-center gap-2">
               LinkedIn
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mx-3"
+                className="h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
               </svg>
-            </button>
+            </Button>
           </Link>
         </div>
       </div>
