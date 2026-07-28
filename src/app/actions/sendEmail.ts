@@ -1,5 +1,7 @@
 "use server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
   const name = formData.get("name") as string;
@@ -10,23 +12,19 @@ export const sendEmail = async (formData: FormData) => {
       return { success: false, message: "All fields are required" };
   }
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: "ankit21654@gmail.com",
-    subject: `New Message from Portfolio: ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-  };
-
   try {
-    await transporter.sendMail(mailOptions);
+    const data = await resend.emails.send({
+      from: 'Contact Form <onboarding@resend.dev>',
+      to: 'ankit21654@gmail.com', // Sending to yourself
+      subject: `New Message from Portfolio: ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      replyTo: email,
+    });
+
+    if (data.error) {
+      return { success: false, message: data.error.message };
+    }
+
     return { success: true, message: "Email sent successfully!" };
   } catch (error) {
     console.error("Error sending email:", error);

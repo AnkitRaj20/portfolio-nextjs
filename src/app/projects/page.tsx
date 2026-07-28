@@ -5,6 +5,7 @@ import { readContent } from "@/lib/json-cms";
 
 const Page = async () => {
   const content = await readContent();
+  const visibleProjects = content?.projects?.filter((p: any) => !p.isHidden) || [];
   return (
     <div className="min-h-screen w-full dark:bg-black bg-white  dark:bg-grid-small-white/[0.4] bg-grid-small-black/[0.2] relative flex justify-center flex-wrap pt-24 pb-8">
 
@@ -26,7 +27,7 @@ const Page = async () => {
           </p>
         </div>
 
-        <ProjectGrid projects={content?.projects} />
+        <ProjectGrid projects={visibleProjects} />
       </div>
     </div>
   );

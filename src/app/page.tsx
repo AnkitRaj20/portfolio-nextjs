@@ -12,14 +12,15 @@ import { readContent } from "@/lib/json-cms";
 
 const page = async () => {
   const content = await readContent();
+  const visibleProjects = content?.projects?.filter((p: any) => !p.isHidden) || [];
 
   return (
     <div>
       {/* <Hero /> */}
       <Hero3 content={content?.hero} />
-      <About content={content?.about} projectCount={content?.projects?.length || 0} />
+      <About content={content?.about} projectCount={visibleProjects.length} />
       <Skills skills={content?.skills} />
-      <FeaturedProjects projects={content?.projects} />
+      <FeaturedProjects projects={visibleProjects} />
       <Contact content={content?.contact} />
     </div>
   );

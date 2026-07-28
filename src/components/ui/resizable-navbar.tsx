@@ -75,9 +75,9 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(
-              child as React.ReactElement<{ visible?: boolean }>,
-              { visible },
-            )
+            child as React.ReactElement<{ visible?: boolean }>,
+            { visible },
+          )
           : child,
       )}
     </motion.div>
@@ -249,7 +249,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 
-export const NavbarLogo = ({ text = "Ankit.dev", image = "/images/logo.jpg" }: { text?: string; image?: string }) => {
+export const NavbarLogo = ({ text = "Ankit.Raj", image = "/images/logo.jpg" }: { text?: string; image?: string }) => {
   return (
     <Link
       href="/"
@@ -281,9 +281,9 @@ export const NavbarButton = ({
   className?: string;
   variant?: "primary" | "secondary" | "ghost" | "default";
 } & (
-  | React.ComponentPropsWithoutRef<"a">
-  | React.ComponentPropsWithoutRef<"button">
-)) => {
+    | React.ComponentPropsWithoutRef<"a">
+    | React.ComponentPropsWithoutRef<"button">
+  )) => {
   return (
     <Tag
       href={href || undefined}

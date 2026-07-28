@@ -229,28 +229,28 @@
   ],
   "timeline": [
     {
-      "Date": "2025-Present",
+      "Date": "Sep 2025-Present",
       "title": "FullStack developer",
       "School": "LCNC Technologies",
       "location": "Noida sector 62",
-      "description": "FullStack developer at LCNC Technologies",
+      "description": "Building and maintaining drapcode.com (marketing site) in Nuxt 4<br />\nBuilding and maintaining scoutance.com (marketing site) in Nuxt 4<br />\nWorking on app.scoutance.com, the main product dashboard, using the MERN stack with AI integration<br />",
       "type": "work"
     },
     {
-      "Date": "2025 - 2025",
+      "Date": "May 2025 - Aug 2025",
       "title": "Software Developer",
       "School": "Techbeliever",
       "location": "Noida",
-      "description": "Working as a Software Developer",
+      "description": "Worked on Khiladi Adda, a real-money gaming platform — contributed to KYC onboarding, wallet systems, and backend API performance optimization",
       "bg": "#F11A7B",
       "type": "work"
     },
     {
-      "Date": "2024 - 2025",
+      "Date": "Jun 2024 - Apr 2025",
       "title": "Node.js Developer",
       "School": "Sartia Global Pvt Ltd",
       "location": "Noida",
-      "description": "Working as a Backend Developer",
+      "description": "Worked on EazeAccounts, a QuickBooks-style accounting platform for a Chartered Accountant client - handled bank integration (Plaid), financial reporting, and backend API architecture<br />\nWorked on EventPulse, a real-time event platform - contributed to Kafka-based data streaming, Redis caching, and Socket.io chat infrastructure supporting ~10k daily active users<br />",
       "bg": "#F11A7B",
       "type": "work"
     },
@@ -264,9 +264,9 @@
       "type": "education"
     },
     {
-      "Date": "2020 - 2021",
+      "Date": "Dec 2020 - Jun 2021",
       "title": "FullStack Developer",
-      "School": "CodeMetrics Infotech",
+      "School": "CodeMetrics Infotech Internship",
       "location": "Noida, Uttar Pradesh",
       "description": "Working as a FullStack Developer",
       "bg": "#F11A7B",
@@ -390,7 +390,8 @@
       "url": null,
       "links": [],
       "tag": "fullstack",
-      "sequence": 20
+      "sequence": 2000,
+      "isHidden": true
     },
     {
       "id": "4",
@@ -414,7 +415,8 @@
       "url": "https://ankitcodes.vercel.app",
       "links": [],
       "tag": "frontend",
-      "sequence": 30
+      "sequence": 3000,
+      "isHidden": true
     },
     {
       "id": "5",
@@ -440,74 +442,27 @@
       "url": null,
       "links": [],
       "tag": "fullstack",
-      "sequence": 40
-    },
-    {
-      "id": "6",
-      "name": "WeatherX",
-      "description": "Online Weather Website",
-      "detailedDescription": "Welcome to our weather website, where you can find all the latest and up-to-date weather information for your location and beyond. Our website provides accurate and reliable weather forecasts, current conditions, and real-time radar and satellite images to help you plan your day and stay prepared for any weather conditions.",
-      "image": "/images/weatherx.png",
-      "languagesUsed": [
-        "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/html5/html5-original.svg",
-        "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/css3/css3-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-      ],
-      "isFeatured": false,
-      "status": "Live",
-      "features": [
-        "Real time weather for all cities",
-        "Searching",
-        "API integration"
-      ],
-      "github": "https://github.com/AnkitRaj20/WeatherX.github.io/tree/main",
-      "url": "https://weather-x-github-io.vercel.app",
-      "links": [],
-      "tag": "frontend",
-      "sequence": 50
-    },
-    {
-      "id": "7",
-      "name": "TextUtils",
-      "description": "Welcome to TextUtils - your go-to website for converting text to uppercase, lowercase, removing extra spaces and copying text with ease!",
-      "detailedDescription": "At TextUtils, we understand that working with text can be a time-consuming and tedious task. That's why we've created a platform that makes it easy for you to manipulate your text to suit your needs. With our simple yet powerful tools, you can quickly and easily transform your text to suit your requirements, whether you're a student, a writer, a marketer or a professional in any field.",
-      "image": "/images/textutils.png",
-      "languagesUsed": [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-        "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/css3/css3-original.svg"
-      ],
-      "isFeatured": false,
-      "status": "Live",
-      "features": [
-        "Text to Uppercase",
-        "Text to Lowercase",
-        "Remove Extra Spaces",
-        "Copy Text"
-      ],
-      "github": "https://github.com/AnkitRaj20/react-TextUtils",
-      "url": "https://text-utils-iota.vercel.app/",
-      "links": [],
-      "tag": "frontend",
-      "sequence": 70
+      "sequence": 4000,
+      "isHidden": true
     },
     {
       "id": "8",
       "name": "EazeAccounts",
-      "description": "EazeAccounts — a QuickBooks-style accounting platform built for a CA client, handling full US GAAP workflows: balance sheets, income statements, and Chart of Accounts.",
-      "detailedDescription": "\n          EazeAccounts is a comprehensive financial management platform designed for Chartered Accountants (CA) to efficiently manage and track financial transactions for individuals and organizations. <br />\n          Inspired by QuickBooks, the platform offers features like bank integration, sales tracking, income and balance sheet management, and detailed financial reporting. <br /><br />\n          With its advanced capabilities, EazeAccounts empowers users to securely manage their financial data, providing seamless transaction tracking and accurate record-keeping. The platform allows users to add and manage multiple bank accounts, track transactions, generate detailed financial reports, and manage income and expense balances with real-time updates.<br /><br />\n          Developed with RESTful APIs for secure and efficient handling of critical financial data, EazeAccounts integrates with Stripe for payment processing, ensuring smooth and frictionless transactions. Additionally, the platform uses Sequelize ORM for optimized data management, handling complex financial queries and ensuring high performance. <br /><br />\n          EazeAccounts is designed to meet the needs of Chartered Accountants and businesses, making it an ideal solution for those looking to streamline their financial management tasks.\n        ",
+      "description": "A QuickBooks-style accounting platform built for a Chartered Accountant client — handling full US accounting workflows: bank integration using Plaid, income and balance sheet management, and financial reporting for individuals and organizations.",
+      "detailedDescription": "EazeAccounts is a financial management platform built for a real client — a Chartered Accountant needing QuickBooks-equivalent functionality for managing US accounting workflows across multiple clients and organizations.<br /><br />\n\nThe platform handles the core financial documents an accountant actually needs: balance sheets, income statements, and a full Chart of Accounts, alongside multi-bank account tracking and transaction management. Every transaction feeds into real-time balance updates and detailed financial reports, so users always have an accurate, current view of their finances.\n<br /><br />\nCore systems:\n<br />\n - Bank integration via Plaid, supporting multiple linked accounts per user\n - Sales tracking, income and balance sheet management, and Chart of Accounts (COA) support<br />\n - Customizable financial reporting<br />\n - Role-based and organization-based authentication (JWT), supporting multi-organization access<br />\n - Stripe integration for payment processing<br />\n<br /><br />\nArchitecture:\n<br />\nRESTful API design for secure, efficient handling of sensitive financial data\nSequelize ORM for optimized handling of complex financial queries at scale",
       "image": "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png",
       "languagesUsed": [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
         "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mysql/mysql-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
       ],
-      "isFeatured": false,
+      "isFeatured": true,
       "status": "Live",
       "features": [
         "Bank Integration using Plaid",
         "Sales Tracking",
-        "Income & Balance Sheet Management",
-        "Customizable Reports",
+        "Income and Balance Sheet Management (Chart of Accounts)",
+        "Customizable Financial Reports",
         "Role-based and Organization-based Authentication (JWT)",
         "Stripe Payment Integration"
       ],
@@ -516,33 +471,10 @@
       "sequence": 15
     },
     {
-      "id": "9",
-      "name": "IMS",
-      "description": "Inventory Management System",
-      "detailedDescription": "A Node.js-based IMS for real-time product tracking, stock updates, and categorization. Developed RESTful APIs for secure CRUD operations with role-based authentication.",
-      "image": "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png",
-      "languagesUsed": [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-        "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mysql/mysql-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-      ],
-      "isFeatured": false,
-      "status": "Live",
-      "features": [
-        "Real-time Product Tracking",
-        "Stock Updates",
-        "Categorization",
-        "Role-based Authentication"
-      ],
-      "links": [],
-      "tag": "backend",
-      "sequence": 8
-    },
-    {
       "id": "10",
       "name": "EventPulse",
-      "description": "Anonymous Event Posting & Application Platform",
-      "detailedDescription": "EventPulse is an anonymous event posting and application platform designed for a seamless and robust event management experience. <br /><br />Engineered using a microservices architecture in Node.js, the platform efficiently handles approximately 10k daily active users by distributing workloads across specialized services. <br /><br />Key technical innovations include: <br /> - High-Throughput Data Streaming: Utilized Kafka for processing real-time notifications and chat data, increasing system throughput by 70%. <br />- Real-Time Communication: Employed Socket.io to deliver near-instant chat responses and support robust concurrency. <br />- Caching & Performance: Implemented Redis for caching frequently accessed data, reducing average response times by ~60%. <br />- Secure Authentication: Leveraged Bcrypt for password hashing and Crypto for encryption while adopting JWT for secure, token-based authentication. <br />- Notification Management: Integrated Firebase for push notifications alongside a priority queue for time-sensitive alerts, achieving a 99.9% delivery rate. <br />- Database Management: Used MySQL paired with Sequelize ORM to maintain data consistency and transactional integrity. <br />- Payment Processing: Incorporated Razorpay to enable frictionless payment transactions. <br /><br />Developed with modern technologies and best practices, EventPulse stands as a significant technical achievement, demonstrating high performance, enhanced security, and scalable event management capabilities.",
+      "description": "EventPulse is an anonymous event posting and application platform built on a Node.js microservices architecture, handling ~10k daily active users. Worked on the real-time infrastructure — Kafka streaming, Socket.io chat, and Redis caching — as part of the engineering team.",
+      "detailedDescription": "EventPulse is an anonymous event posting and application platform, built to handle real-time interaction — chat, notifications, and applications — at scale. I worked on this as part of the engineering team at [Company], focused primarily on the platform's real-time infrastructure and performance layer.<br /><br />\n\nThe platform runs on a Node.js microservices architecture, distributing load across specialized services to support around 10,000 daily active users without single points of bottleneck.\n<br /><br />\nWhat I worked on:\n<br />\n - Real-time data streaming — used Kafka to process live notifications and chat data, increasing overall system throughput by 70% <br />\n - Live chat infrastructure — built with Socket.io for near-instant messaging with robust concurrency handling. <br />\n - Caching layer — implemented Redis for frequently accessed data, cutting average response times by roughly 60%. <br />\n - Notification system — integrated Firebase push notifications with a priority queue for time-sensitive alerts, achieving a 99.9% delivery rate\n<br /><br />\nSupporting systems (team-built):\n<br />\n - JWT-based authentication with Bcrypt password hashing and Crypto encryption.<br />\n - MySQL with Sequelize ORM for consistent, transactional data handling\nRazorpay integration for in-platform payments",
       "image": "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png",
       "languagesUsed": [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
@@ -570,8 +502,8 @@
     {
       "id": "11",
       "name": "LMS",
-      "description": "Full-Featured LMS Backend with Secure Payments and Role-Based Access",
-      "detailedDescription": "This Learning Management System (LMS) backend is a production-ready platform enabling seamless online course management. <br /><br />\n  Built using a modular Node.js architecture with MongoDB, the system features robust role-based authentication (Admin, Instructor, Student), RESTful API design, and advanced progress tracking. <br /><br />\n  Key technical highlights include: <br />\n  - 🎓 **Role-Based Access Control**: Secure endpoints using JWT and Bcrypt, with distinct roles for admin, instructors, and students.<br />\n  - 🧾 **Certificate Generation**: Auto-generated certificates on course completion.<br />\n  - 💳 **Secure Payments**: Razorpay integration for smooth and secure transactions.<br />\n  - ☁️ **Media Uploads**: Cloudinary support for image and video uploads via Multer.<br />\n  - 🛒 **Wishlist & Progress Tracking**: Track lecture completion and manage course wishlists.<br />\n  - 📊 **Advanced Logging**: Winston + Morgan for centralized activity/error logging.<br />\n  - 🛡️ **Security Best Practices**: Helmet, rate limiting, and encrypted credentials for maximum protection.<br />\n  - 🔗 **Versioned APIs**: All routes start with `/api/v1/` for clean scalability.<br /><br />\n  Ideal as a foundation for full-scale LMS platforms or as a boilerplate for backend learners.",
+      "description": "A production-ready LMS backend supporting role-based course management for admins, instructors, and students — with secure payments, certificate generation, and full progress tracking.",
+      "detailedDescription": "This is a backend system for a full-scale Learning Management System, built to support real course delivery — not just CRUD operations. It handles three distinct user roles (admin, instructor, student), each with different permissions and access to course, payment, and progress data.\n<br /><br />\nThe system covers the full lifecycle of an online course: enrollment and payment, lecture progress tracking, wishlisting, and certificate generation on completion — all behind a versioned, secured API layer.\n<br /><br />\nCore systems:\n<br />\nRole-based access control (JWT + Bcrypt) with distinct permission sets for admin, instructor, and student roles<br />\nRazorpay integration for secure course payments<br />\nCloudinary + Multer for video/image uploads (course content, thumbnails)<br />\nProgress tracking across lectures, with wishlist management<br />\nAutomatic certificate generation on course completion<br />\n<br /><br />\nProduction practices:\n<br />\nCentralized logging (Winston + Morgan) for activity and error tracking<br />\nSecurity hardening: Helmet, HPP, rate limiting, and encrypted credentials<br />\nVersioned API structure (/api/v1/) for clean long-term scalability<br />",
       "image": "/images/LMS Backend API Overview.png",
       "languagesUsed": [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
@@ -600,8 +532,8 @@
     {
       "id": "12",
       "name": "Blog Platform Backend",
-      "description": "Scalable MERN Blog Backend with Nested Comments and Emoji Reactions",
-      "detailedDescription": "This is a powerful and scalable backend API for a modern blog platform built with the MERN stack. <br /><br />\n  Designed for extensibility and performance, this backend provides complete support for user authentication, content management, and an interactive commenting system. <br /><br />\n  Key technical highlights include: <br />\n  - 🔐 **JWT-Based Authentication**: Secure login, registration, and token-based route protection.<br />\n  - 💬 **Comment System**: Fully featured nested comment and reply system with CRUD operations.<br />\n  - 😊 **Emoji Reactions**: Facebook-style emoji reactions on blog posts.<br />\n  - ☁️ **Profile Image Uploads**: File uploads using Multer with local or cloud storage support.<br />\n  - 🧾 **Blog CRUD API**: Create, read, update, and delete blogs with clean RESTful endpoints.<br />\n  - 🛡️ **Security Best Practices**: Helmet, CORS, rate limiting, and bcrypt password hashing.<br />\n  - 🔗 **Versioned Routes**: All endpoints follow a scalable `/api/v1/` structure.<br /><br />\n  Ideal for blog platforms or as a backend boilerplate for developers looking to learn real-world CRUD systems with nested structures.",
+      "description": "A scalable  blog platform backend with JWT authentication, a fully nested comment system, and Facebook-style emoji reactions — built with clean, versioned RESTful APIs.",
+      "detailedDescription": "This is a backend API for a modern blog platform, built to support real content and community interaction — not just basic post CRUD. The standout piece is the comment system: full nested comments and replies with complete CRUD operations, plus Facebook-style emoji reactions on posts, giving the platform genuine social/interactive depth beyond a typical blog backend. <br /><br />\n\nCore systems:\n<br />\n - JWT-based authentication with secure login, registration, and protected routes.<br />\n - Nested comment and reply system with full CRUD support.<br />\n - Emoji reactions on blog posts.<br />\n - Blog post CRUD via clean RESTful endpoints.<br />\n - Profile image uploads (Multer, local/cloud storage)<br /><br />\n\nArchitecture and security:\n<br />\n - Modular controller-service architecture for maintainability.<br />\n - Role-based middleware (user/admin)<br />\n - Security hardening: Helmet, CORS, rate limiting, Bcrypt password hashing.<br />\n - Versioned API structure (/api/v1/) for scalability",
       "image": "/images/blog.png",
       "languagesUsed": [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
@@ -653,58 +585,6 @@
       "links": [],
       "tag": "backend",
       "sequence": 3
-    },
-    {
-      "id": "14",
-      "name": "RummyAdda",
-      "description": "Online Rummy Gaming Platform with Admin Panel",
-      "detailedDescription": "RummyAdda is a secure and feature-rich Rummy gaming platform integrated into the Khiladi Adda ecosystem. <br /><br />\n  It provides smooth user experiences, wallet handling, and compliance integrations. <br /><br />\n  Technical highlights: <br />\n  - 🔑 **Authentication** with JWT and secure password hashing. <br />\n  - 🎮 **Game APIs** optimized for high traffic with Redis caching. <br />\n  - 🌍 **Location-Based Compliance**: Auto-detects user's IP for state/country-specific rules. <br />\n  - 💵 **Wallet Flows** including deposits, withdrawals, and winnings transfer. <br />\n  - 📝 **Admin Panel** contributions in React.js for real-time monitoring. <br />\n  - 🛡️ **Data Security** with Bcrypt & Crypto encryption. <br />\n  - ⚡ **Performance Optimizations** reducing API latency significantly.",
-      "image": "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png",
-      "languagesUsed": [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-      ],
-      "isFeatured": false,
-      "status": "Live",
-      "features": [
-        "JWT-Based Authentication",
-        "Wallet Flows (Deposit, Withdraw,Bonus, Winnings Transfer)",
-        "Location-Based Compliance",
-        "React.js Admin Panel",
-        "Redis Caching for Performance",
-        "Encryption with Bcrypt & Crypto"
-      ],
-      "links": [],
-      "tag": "backend",
-      "sequence": 173
-    },
-    {
-      "id": "15",
-      "name": "Bharat Rummy",
-      "description": "End-to-End Backend for Real Money Rummy Platform",
-      "detailedDescription": "Bharat Rummy is a standalone real money Rummy application for Indian users, fully developed with backend-first principles. <br /><br />\n  I built the complete backend system, covering: <br />\n  - 💳 **Wallet Management**: Real-time balances & transaction logs. <br />\n  - 🏦 **Payment Gateway Integrations** for deposits, withdrawals, and winnings. <br />\n  - 🧾 **TDS Implementation** ensuring compliance in user transactions. <br />\n  - 🔐 **KYC Workflows** with Aadhaar/PAN for secure onboarding. <br />\n  - ⚡ **Optimized REST APIs** capable of handling high-traffic loads. <br />\n  - 🛡️ **Secure Transactions** with Bcrypt hashing, Crypto encryption, and rate limiting.",
-      "image": "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png",
-      "languagesUsed": [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
-      ],
-      "isFeatured": false,
-      "status": "Live",
-      "features": [
-        "End-to-End Backend System",
-        "Wallet with Real-Time Balance & Logs",
-        "Multiple Payment Gateway Integrations",
-        "TDS Compliance for Transactions",
-        "KYC with Aadhaar/PAN",
-        "Optimized REST APIs for High Traffic"
-      ],
-      "links": [],
-      "tag": "backend",
-      "sequence": 898
     }
   ]
 }

@@ -81,9 +81,10 @@ export const Timeline = ({ data }: { data: any[] }) => {
                  </div>
 
                  <div className="p-4 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl">
-                    <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                        {item.description}
-                    </p>
+                    <p 
+                       className="text-neutral-700 dark:text-neutral-300 leading-relaxed"
+                       dangerouslySetInnerHTML={{ __html: item.description || "" }}
+                    />
                     <div className="mt-2 inline-flex items-center text-xs font-semibold text-neutral-500 uppercase tracking-wider">
                          📍 {item.location}
                     </div>
