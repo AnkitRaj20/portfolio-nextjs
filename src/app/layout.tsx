@@ -5,6 +5,8 @@ import "./globals.css";
 import Nav from "@/components/Nav2";
 import Footer from "@/components/Footer";
 import { readContent } from "@/lib/json-cms";
+import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -78,6 +80,8 @@ export default async function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <Analytics />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX"} />
       </body>
     </html>
   );
