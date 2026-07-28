@@ -3,6 +3,12 @@ import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resume",
+  description: "Download and view the resume of Ankit Raj, FullStack Developer.",
+};
 
 const ResumePage = () => {
   return (

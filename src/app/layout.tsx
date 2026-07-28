@@ -9,18 +9,42 @@ import { readContent } from "@/lib/json-cms";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ankit Raj | FullStack Developer",
-  description: "Portfolio of Ankit Raj, a FullStack Developer specializing in Next.js, React, and Node.js. View my projects and timeline.",
+  metadataBase: new URL("https://ankitcodes.tech"),
+  title: {
+    default: "Ankit Raj | FullStack Developer & Node.js Specialist",
+    template: "%s | Ankit Raj",
+  },
+  description: "Portfolio of Ankit Raj, a FullStack Developer specializing in Node.js, Next.js, and System Architecture. View my projects and timeline.",
+  keywords: [
+    "Ankit Raj",
+    "FullStack Developer",
+    "Node.js",
+    "Next.js",
+    "System Architect",
+    "React",
+    "Best Backend Developer",
+    "Top Node.js Developer",
+    "Backend Architecture",
+    "API Developer",
+    "Web Development",
+    "Software Engineer"
+  ],
+  authors: [{ name: "Ankit Raj", url: "https://ankitcodes.tech" }],
+  creator: "Ankit Raj",
+  verification: {
+    google: "cDbZEv9CfOg3T0aRalC9l6tJV01kHVxZWLPix4-0FL4",
+  },
   openGraph: {
     title: "Ankit Raj | FullStack Developer",
-    description: "Portfolio of Ankit Raj, a FullStack Developer specializing in Next.js, React, and Node.js. View my projects and timeline.",
-    url: "https://ankitcodes.tech", // Replace with actual URL
+    description: "Portfolio of Ankit Raj, a FullStack Developer specializing in Node.js, Next.js, and System Architecture. View my projects and timeline.",
+    url: "https://ankitcodes.tech",
     siteName: "Ankit Raj Portfolio",
     images: [
       {
         url: "/images/mine2.jpg", // Ensure this image path is correct/public
         width: 800,
         height: 600,
+        alt: "Ankit Raj Portfolio Image",
       },
     ],
     locale: "en_US",
@@ -29,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ankit Raj | FullStack Developer",
-    description: "Portfolio of Ankit Raj, a FullStack Developer specializing in Next.js, React, and Node.js.",
+    description: "Portfolio of Ankit Raj, a FullStack Developer specializing in Node.js, Next.js, and System Architecture.",
     images: ["/images/mine2.jpg"],
   },
 };

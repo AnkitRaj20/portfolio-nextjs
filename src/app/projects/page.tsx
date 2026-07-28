@@ -2,7 +2,12 @@ import ProjectGrid from "@/components/ProjectGrid";
 import Link from "next/link";
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import { readContent } from "@/lib/json-cms";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Explore the fullstack and backend projects built by Ankit Raj.",
+};
 const Page = async () => {
   const content = await readContent();
   const visibleProjects = content?.projects?.filter((p: any) => !p.isHidden) || [];

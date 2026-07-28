@@ -2,6 +2,12 @@
 import React from "react";
 import { Timeline } from "@/components/timeline/NewTimeline";
 import { readContent } from "@/lib/json-cms";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience & Timeline",
+  description: "View the professional experience and educational timeline of Ankit Raj.",
+};
 
 const Page = async () => {
   const content = await readContent();

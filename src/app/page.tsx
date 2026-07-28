@@ -9,6 +9,12 @@ import Contact from "@/components/Contact";
 
 
 import { readContent } from "@/lib/json-cms";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ankit Raj | FullStack Developer & Node.js Specialist",
+  description: "Portfolio of Ankit Raj, a FullStack Developer specializing in Node.js, Next.js, and System Architecture.",
+};
 
 const page = async () => {
   const content = await readContent();
