@@ -27,10 +27,10 @@ export default function Nav({ navbarData }: { navbarData?: any }) {
     { name: "Blogs", "link": "/blogs" },
     { name: "Contact", link: "mailto:ankit21654@gmail.com" },
   ];
-  
+
   const resumeLink = navbarData?.resume?.link || "/resume";
   const resumeText = navbarData?.resume?.text || "Resume";
-  const logoText = navbarData?.logo?.text || "Ankit.dev";
+  const logoText = navbarData?.logo?.text || "Ankit.Raj";
   const logoImage = navbarData?.logo?.image || "/images/logo.jpg";
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -43,7 +43,7 @@ export default function Nav({ navbarData }: { navbarData?: any }) {
         {/* Desktop Navigation */}
         <NavBody>
           <div className="flex items-center gap-2">
-             <NavbarLogo text={logoText} image={logoImage} />
+            <NavbarLogo text={logoText} image={logoImage} />
           </div>
           <NavItems items={navItems} />
           <div className="flex items-center gap-2">
@@ -89,8 +89,8 @@ export default function Nav({ navbarData }: { navbarData?: any }) {
                 {resumeText}
               </NavbarButton>
               <div className="flex items-center gap-2">
-                 <span className="text-sm font-medium text-neutral-600 dark:text-neutral-300">Theme</span>
-                 <Darkmode />
+                <span className="text-sm font-medium text-neutral-600 dark:text-neutral-300">Theme</span>
+                <Darkmode />
               </div>
             </div>
           </MobileNavMenu>

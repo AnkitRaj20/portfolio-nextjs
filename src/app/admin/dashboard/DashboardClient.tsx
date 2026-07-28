@@ -104,6 +104,7 @@ export default function DashboardClient({ initialContent }: { initialContent: an
       image: "",
       languagesUsed: [],
       isFeatured: false,
+      isHidden: false,
       status: "In Progress",
       features: [],
       github: "",
@@ -731,7 +732,7 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                          </div>
 
                         {/* Config */}
-                        <div className="grid gap-4 md:grid-cols-3">
+                        <div className="grid gap-4 md:grid-cols-4">
                              <div>
                                <label className="mb-1 block text-sm font-medium dark:text-neutral-300">Tag (Category)</label>
                                 <input
@@ -759,6 +760,16 @@ export default function DashboardClient({ initialContent }: { initialContent: an
                                    onChange={(e) => updateProject(idx, "isFeatured", e.target.checked)}
                                  />
                                  <label htmlFor={`featured-${idx}`} className="text-sm font-medium dark:text-neutral-300">Is Featured?</label>
+                            </div>
+                            <div className="flex items-center gap-2 pt-6">
+                                <input
+                                   type="checkbox"
+                                   id={`hidden-${idx}`}
+                                   checked={project.isHidden || false}
+                                   className="h-4 w-4"
+                                   onChange={(e) => updateProject(idx, "isHidden", e.target.checked)}
+                                 />
+                                 <label htmlFor={`hidden-${idx}`} className="text-sm font-medium dark:text-neutral-300">Is Hidden?</label>
                             </div>
                         </div>
 

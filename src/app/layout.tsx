@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ankit Raj | FullStack Developer",
     description: "Portfolio of Ankit Raj, a FullStack Developer specializing in Next.js, React, and Node.js. View my projects and timeline.",
-    url: "https://ankit.dev", // Replace with actual URL
+    url: "https://ankitcodes.tech", // Replace with actual URL
     siteName: "Ankit Raj Portfolio",
     images: [
       {

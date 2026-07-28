@@ -8,6 +8,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const content = await readContent();
   const project = content?.projects.find((p: any) => p.id === id);
 
+  if (!project || project.isHidden) {
+    return <div className="min-h-screen pt-28 pb-12 flex items-center justify-center text-2xl font-bold dark:text-white text-black">Project not found</div>;
+  }
+
   return (
     <div className="min-h-screen pt-28 pb-12 bg-gradient-to-tr from-indigo-100 via-purple-50 to-teal-100 dark:from-gray-500 dark:via-slate-700 dark:to-zinc-900">
       <div className="dark:text-gray-100 grid grid-cols-1 gap-8 lg:grid-cols-3 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
