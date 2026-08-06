@@ -80,7 +80,6 @@ Make sure you have Node.js 20+ installed.
 3. **Set up Environment Variables**
    Create a `.env` file in the root directory and add:
    ```env
-   MONGODB_URI="your-mongodb-uri"
    RESEND_API_KEY="your-resend-key"
    NEXT_PUBLIC_GA_ID="your-google-analytics-id"
    ```
