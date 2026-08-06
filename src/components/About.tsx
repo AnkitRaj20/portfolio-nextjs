@@ -33,11 +33,11 @@ export default function About({ content, projectCount }: AboutProps) {
           {content.heading}
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-content-center">
-        <div className="ml-10 flex flex-col justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto px-6 sm:px-10 items-center">
+        <div className="flex flex-col justify-center">
           <div>
             <TextGenerateEffect
-              className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-500 flex items-center justify-start"
+              className="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 font-normal leading-relaxed"
               words={content.description}
             />
 
@@ -76,17 +76,16 @@ export default function About({ content, projectCount }: AboutProps) {
             </Link>
           </div>
         </div>
-        <div>
+        <div className="flex justify-center items-center">
           <Image
             src={content.image}
             height={400}
             width={400}
-            alt="me"
-            className="m-auto flex rounded-full"
+            alt="Ankit Raj"
+            className="rounded-full shadow-2xl border-4 border-neutral-200 dark:border-neutral-800 object-cover max-w-[280px] sm:max-w-[360px] h-auto"
           />
         </div>
       </div>
-      <div className="flex items-center ml-10"></div>
     </section>
   );
 }
