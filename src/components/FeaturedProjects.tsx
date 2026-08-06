@@ -34,7 +34,7 @@ const FeaturedProjects = ({ projects = [] }: { projects?: any[] }) => {
             <Card
               id={project.id}
               name={project.name}
-              description={project.detailedDescription}
+              description={project.description || project.detailedDescription}
               languagesUsed={project.languagesUsed}
               github={project.github}
               url={project.url}

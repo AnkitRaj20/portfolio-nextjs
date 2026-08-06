@@ -1,12 +1,11 @@
 import { MetadataRoute } from "next";
-import { readContent } from "@/lib/json-cms";
+import { projectlist } from "@/constants/project";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://ankitcodes.tech";
-  const content = await readContent();
-  
+
   // Static routes
-  const routes = ["", "/projects", "/timeline", "/resume"].map((route) => ({
+  const routes = ["", "/projects", "/timeline", "/resume", "/blogs"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
@@ -14,8 +13,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Dynamic project routes
-  const projects = content?.projects || [];
-  const projectRoutes = projects.map((project: any) => ({
+  const visibleProjects = projectlist.filter((p) => !p.isHidden);
+  const projectRoutes = visibleProjects.map((project) => ({
     url: `${baseUrl}/projects/${project.id}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,

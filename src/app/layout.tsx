@@ -1,10 +1,10 @@
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav2";
 import Footer from "@/components/Footer";
-import { readContent } from "@/lib/json-cms";
+import { navbarData } from "@/constants";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Ankit Raj Portfolio",
     images: [
       {
-        url: "/images/mine2.jpg", // Ensure this image path is correct/public
+        url: "/images/mine2.jpg",
         width: 800,
         height: 600,
         alt: "Ankit Raj Portfolio Image",
@@ -60,13 +60,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const content = await readContent();
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
@@ -76,7 +74,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Nav navbarData={content?.navbar} />
+          <Nav navbarData={navbarData} />
           {children}
           <Footer />
         </ThemeProvider>

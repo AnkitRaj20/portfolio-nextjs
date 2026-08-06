@@ -34,6 +34,7 @@ const ProjectGrid = ({ projects = [] }: { projects?: any[] }) => {
               tag={project.tag as 'development' | 'dsa' | undefined}
             />
           </div>
+
         ))}
       </div>
     );
@@ -44,7 +45,7 @@ const ProjectGrid = ({ projects = [] }: { projects?: any[] }) => {
       <TabsList className="lg:mx-24 mx-6 my-2 text-black dark:bg-zinc-900 dark:text-white">
         <TabsTrigger value="all">All</TabsTrigger>
         <TabsTrigger value="fullstack">FullStack</TabsTrigger>
-        <TabsTrigger value="frontend">Frontend</TabsTrigger>
+        {/* <TabsTrigger value="frontend">Frontend</TabsTrigger> */}
         <TabsTrigger value="backend">Backend</TabsTrigger>
       </TabsList>
 

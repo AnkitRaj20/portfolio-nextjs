@@ -35,8 +35,6 @@ export default function Nav({ navbarData }: { navbarData?: any }) {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  if (pathname.startsWith("/admin")) return null;
-
   return (
     <div className="relative w-full">
       <Navbar>
