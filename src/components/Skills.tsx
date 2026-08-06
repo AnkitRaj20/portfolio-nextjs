@@ -1,48 +1,102 @@
 "use client";
 import React from "react";
 import Skill from "./Skillitem";
+import { cn } from "@/lib/utils";
 
-interface SkillsProps {
-  skills: any[];
+interface SkillItemType {
+  name: string;
+  url: string;
+  whiteColor?: boolean;
+  category: string;
+  isHidden?: boolean;
 }
 
-const Skills = ({ skills }: SkillsProps) => {
-  const visibleSkills = skills?.filter((skill: any) => !skill.isHidden) || [];
+interface SkillsProps {
+  skills: SkillItemType[];
+}
 
-  const groupedSkills = visibleSkills.reduce((acc: any, skill: any) => {
-    const category = skill.category || "Other";
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push(skill);
-    return acc;
-  }, {});
+interface SkillCellProps {
+  category: string;
+  skills: SkillItemType[];
+  isAccented?: boolean;
+  badge?: string;
+  className?: string;
+  gridColsClass?: string;
+}
 
-  const row1 = ["Frontend", "Backend", "Databases & Caching"];
-  const row2 = ["AI Integration", "Tools", "Other"];
-
-  const renderCard = (cat: string) => {
-    if (!groupedSkills || !groupedSkills[cat] || groupedSkills[cat].length === 0)
-      return null;
-    return (
-      <div
-        key={cat}
-        className="flex flex-col p-6 rounded-2xl bg-neutral-50 dark:bg-slate-900/40 border border-neutral-200 dark:border-slate-800 shadow-xl dark:shadow-none h-full"
-      >
-        <h3 className="text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest text-sm mb-6">
-          {cat}
-        </h3>
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-y-6 gap-x-2 justify-items-center">
-          {groupedSkills[cat].map((s: any) => (
-            <Skill key={s.url} skill={s} />
-          ))}
-        </div>
-      </div>
-    );
-  };
+const SkillCell = ({
+  category,
+  skills = [],
+  isAccented = false,
+  badge,
+  className,
+  gridColsClass = "grid-cols-3 sm:grid-cols-4",
+}: SkillCellProps) => {
+  if (!skills || skills.length === 0) return null;
 
   return (
-    <section id="skills" aria-label="Skills & Tech Stack" className="bg-white dark:bg-black py-10">
+    <div
+      className={cn(
+        "flex flex-col p-6 rounded-2xl border transition-colors duration-300 shadow-sm dark:shadow-none h-full",
+        isAccented
+          ? "bg-teal-500/[0.02] dark:bg-teal-500/[0.03] border-teal-500/40 dark:border-teal-500/40 hover:border-teal-500/70"
+          : "bg-neutral-50 dark:bg-slate-900/40 border-neutral-200 dark:border-slate-800 hover:border-teal-500/40 dark:hover:border-teal-500/40",
+        className
+      )}
+    >
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest text-sm">
+          {category}
+        </h3>
+        {badge && (
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
+            {badge}
+          </span>
+        )}
+      </div>
+
+      <div
+        className={cn(
+          "grid gap-y-6 gap-x-2 justify-items-center items-start my-auto",
+          gridColsClass
+        )}
+      >
+        {skills.map((s) => (
+          <Skill key={s.name || s.url} skill={s} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Skills = ({ skills = [] }: SkillsProps) => {
+  const visibleSkills = skills.filter((skill) => !skill.isHidden);
+
+  const groupedSkills = visibleSkills.reduce<Record<string, SkillItemType[]>>(
+    (acc, skill) => {
+      const category = skill.category || "Other";
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+      acc[category].push(skill);
+      return acc;
+    },
+    {}
+  );
+
+  const frontendSkills = groupedSkills["Frontend"] || [];
+  const backendSkills = groupedSkills["Backend"] || [];
+  const dbSkills = groupedSkills["Databases & Caching"] || [];
+  const aiSkills = groupedSkills["AI Integration"] || [];
+  const toolSkills = groupedSkills["Tools"] || [];
+
+  return (
+    <section
+      id="skills"
+      aria-label="Skills & Tech Stack"
+      className="bg-white dark:bg-black py-10"
+    >
       <div className="text-center mt-3">
         <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
           Skills &amp; Expertise
@@ -52,15 +106,49 @@ const Skills = ({ skills }: SkillsProps) => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-6 sm:max-w-7xl m-auto pb-8 px-4">
-        {/* First Row: 3 Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {row1.map(renderCard)}
-        </div>
-        {/* Second Row: 2 Cards (Centered) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-2/3 mx-auto">
-          {row2.map(renderCard)}
-        </div>
+      {/* Bento Grid Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto pb-8 px-4">
+        {/* Cell 1: Frontend (2x2 on Desktop - High Volume) */}
+        <SkillCell
+          category="Frontend"
+          skills={frontendSkills}
+          className="md:col-span-2 lg:col-span-2 lg:row-span-2"
+          gridColsClass="grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5"
+        />
+
+        {/* Cell 2: Backend (2x1 on Desktop - Single Accent Cell / Core Focus) */}
+        <SkillCell
+          category="Backend"
+          skills={backendSkills}
+          isAccented
+          badge="Core Focus"
+          className="md:col-span-1 lg:col-span-2"
+          gridColsClass="grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6"
+        />
+
+        {/* Cell 3: Databases & Caching (2x1 on Desktop) */}
+        <SkillCell
+          category="Databases & Caching"
+          skills={dbSkills}
+          className="md:col-span-1 lg:col-span-2"
+          gridColsClass="grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4"
+        />
+
+        {/* Cell 4: AI Integration (2x1 on Desktop) */}
+        <SkillCell
+          category="AI Integration"
+          skills={aiSkills}
+          className="md:col-span-1 lg:col-span-2"
+          gridColsClass="grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3"
+        />
+
+        {/* Cell 5: Tools (2x1 on Desktop) */}
+        <SkillCell
+          category="Tools"
+          skills={toolSkills}
+          className="md:col-span-1 lg:col-span-2"
+          gridColsClass="grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3"
+        />
       </div>
     </section>
   );

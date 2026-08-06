@@ -17,8 +17,10 @@ export interface Project {
   isHidden?: boolean;
 }
 
+// const backendImageUrl =
+//   "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png";
 const backendImageUrl =
-  "https://cdn.prod.website-files.com/678a08d17a6b88bae4e2d8ee/67931a07d312ac82c81b8a14_66b0929089fba41bd4d24803_API-Development.png";
+  "/images/api.jpg";
 
 export const projectlist: Project[] = [
   {

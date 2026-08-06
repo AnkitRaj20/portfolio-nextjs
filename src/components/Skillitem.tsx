@@ -5,7 +5,7 @@ import Image from "next/image";
 
 interface Props {
   skill: {
-    whiteColor: boolean;
+    whiteColor?: boolean;
     url: string;
     name: string;
   };
