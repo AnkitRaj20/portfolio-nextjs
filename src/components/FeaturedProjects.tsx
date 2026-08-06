@@ -1,6 +1,4 @@
-
 "use client";
-// import { projectlist } from "@/constants/project";
 import React from "react";
 import Card from "./shared/Card";
 import { Button } from "./ui/button";
@@ -18,12 +16,12 @@ const FeaturedProjects = ({ projects = [] }: { projects?: any[] }) => {
     .sort((a, b) => Number(a.sequence) - Number(b.sequence));
 
   return (
-    <div className="bg-white dark:bg-black py-5">
-      <div className="text-center mt-3 ">
+    <section id="projects" aria-label="Featured Projects" className="bg-white dark:bg-black py-5">
+      <div className="text-center mt-3">
         <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
           Projects
         </h2>
-        <p className="text-3xl sm:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 flex items-center justify-center py-8 ">
+        <p className="text-3xl sm:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 flex items-center justify-center py-8">
           My Featured Projects
         </p>
       </div>
@@ -44,7 +42,7 @@ const FeaturedProjects = ({ projects = [] }: { projects?: any[] }) => {
         ))}
       </div>
 
-      <div className="flex item-center justify-center my-8 ">
+      <div className="flex item-center justify-center my-8">
         <Button
           variant="primary"
           size="lg"
@@ -53,7 +51,7 @@ const FeaturedProjects = ({ projects = [] }: { projects?: any[] }) => {
           Show All Projects
         </Button>
       </div>
-    </div>
+    </section>
   );
 };
 

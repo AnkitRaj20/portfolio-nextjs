@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import Skill from "./Skillitem";
 
@@ -9,7 +8,7 @@ interface SkillsProps {
 
 const Skills = ({ skills }: SkillsProps) => {
   const visibleSkills = skills?.filter((skill: any) => !skill.isHidden) || [];
-  
+
   const groupedSkills = visibleSkills.reduce((acc: any, skill: any) => {
     const category = skill.category || "Other";
     if (!acc[category]) {
@@ -23,13 +22,16 @@ const Skills = ({ skills }: SkillsProps) => {
   const row2 = ["AI Integration", "Tools", "Other"];
 
   const renderCard = (cat: string) => {
-    if (!groupedSkills || !groupedSkills[cat] || groupedSkills[cat].length === 0) return null;
+    if (!groupedSkills || !groupedSkills[cat] || groupedSkills[cat].length === 0)
+      return null;
     return (
-      <div 
-        key={cat} 
+      <div
+        key={cat}
         className="flex flex-col p-6 rounded-2xl bg-neutral-50 dark:bg-slate-900/40 border border-neutral-200 dark:border-slate-800 shadow-xl dark:shadow-none h-full"
       >
-        <h3 className="text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest text-sm mb-6">{cat}</h3>
+        <h3 className="text-teal-600 dark:text-teal-400 font-bold uppercase tracking-widest text-sm mb-6">
+          {cat}
+        </h3>
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-y-6 gap-x-2 justify-items-center">
           {groupedSkills[cat].map((s: any) => (
             <Skill key={s.url} skill={s} />
@@ -40,13 +42,13 @@ const Skills = ({ skills }: SkillsProps) => {
   };
 
   return (
-    <div className="bg-white dark:bg-black py-10">
-      <div className="text-center mt-3 ">
+    <section id="skills" aria-label="Skills & Tech Stack" className="bg-white dark:bg-black py-10">
+      <div className="text-center mt-3">
         <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
-          Skills
+          Skills &amp; Expertise
         </h2>
-        <p className="text-3xl sm:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 flex items-center justify-center py-8 ">
-          What do i know
+        <p className="text-3xl sm:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 flex items-center justify-center py-8">
+          Tech Stack
         </p>
       </div>
 
@@ -60,7 +62,7 @@ const Skills = ({ skills }: SkillsProps) => {
           {row2.map(renderCard)}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

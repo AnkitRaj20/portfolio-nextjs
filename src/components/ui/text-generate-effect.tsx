@@ -14,8 +14,10 @@ export const TextGenerateEffect = ({
   const [scope, animate] = useAnimate();
   // Replace literal '\n' and actual newlines with a unique token surrounded by spaces
   // so it gets split properly.
-  const processedWords = words.replace(/\\n/g, ' \n ').replace(/\n/g, ' \n ');
-  let wordsArray = processedWords.split(" ").filter((word) => word.length > 0 || word === "\n");
+  const processedWords = words.replace(/\\n/g, " \n ").replace(/\n/g, " \n ");
+  const wordsArray = processedWords
+    .split(" ")
+    .filter((word) => word.length > 0 || word === "\n");
 
   useEffect(() => {
     animate(
@@ -32,7 +34,7 @@ export const TextGenerateEffect = ({
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
+      <motion.div ref={scope} aria-hidden="true">
         {wordsArray.map((word, idx) => {
           if (word === "\n") {
             return <br key={`br-${idx}`} />;
@@ -40,9 +42,9 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-black opacity-0"
+              className="dark:text-white text-black opacity-0 inline-block"
             >
-              {word}{" "}
+              {word}&nbsp;
             </motion.span>
           );
         })}
@@ -51,9 +53,11 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div className={cn("font-bold", className)} aria-label={words} role="region">
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
+        {/* Semantic clean text for search engine crawlers and screen readers */}
+        <p className="sr-only">{words}</p>
+        <div className="dark:text-white text-black text-2xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>
