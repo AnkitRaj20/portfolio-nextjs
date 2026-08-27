@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import { projectlist } from "@/constants/project";
+import ImageCarousel from "@/components/ImageCarousel";
 
 export async function generateStaticParams() {
   return projectlist
@@ -93,16 +94,7 @@ export default async function ProjectDetailPage({
 
           <div className="rounded-xl p-4 sm:p-6 ring ring-indigo-50 dark:ring-slate-600 bg-white/40 dark:bg-black/20 backdrop-blur-sm">
             {project?.images && project.images.length > 0 ? (
-              <div className="flex w-full gap-4 overflow-x-auto snap-x snap-mandatory pb-4 hide-scrollbar">
-                {project.images.map((img: string, idx: number) => (
-                  <img
-                    key={idx}
-                    alt={`${project?.name} - Image ${idx + 1}`}
-                    src={img}
-                    className="h-60 w-[95%] sm:w-[90%] flex-none snap-center ring ring-indigo-50 dark:ring-slate-600 rounded-lg object-contain bg-white dark:bg-zinc-800"
-                  />
-                ))}
-              </div>
+              <ImageCarousel images={project.images} projectName={project.name} />
             ) : (
               <img
                 alt={project?.name}

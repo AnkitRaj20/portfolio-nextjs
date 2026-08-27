@@ -79,7 +79,7 @@ GitHub API integration to auto-sync and display real project history`,
       "Finoryx is a personal finance tracker for managing everyday expenses, recurring transactions, and shared costs with others — built to replace my own budgeting spreadsheet. Tracks spending patterns, automates recurring bills, and splits group expenses, Splitwise-style.",
     detailedDescription: `Finoryx started as a personal need: spreadsheets weren't cutting it for tracking recurring bills, shared expenses with friends, and actual spending patterns over time. I built it as a full-stack personal finance platform that handles all three in one place.
 <br /><br />
-The core is a dashboard that tracks monthly budgets, account balances, and spending against a set budget target in real time. Recurring transactions <br />— daily, weekday-only, monthly, or yearly <br />— are automatically processed on schedule rather than requiring manual entry every time, and a group expense feature lets shared costs (rent splits, group purchases, utilities) be tracked and settled the way Splitwise handles shared expenses.
+The core is a dashboard that tracks monthly budgets, account balances, and spending against a set budget target in real time. Recurring transactions <br />- daily, weekday-only, monthly, or yearly <br />- are automatically processed on schedule rather than requiring manual entry every time, and a group expense feature lets shared costs (rent splits, group purchases, utilities) be tracked and settled the way Splitwise handles shared expenses.
 <br /><br />
 What I built:
 <br />
@@ -90,12 +90,15 @@ A transactions table with search, filtering, and CSV export/import<br />
 A quick-add expense flow supporting natural-language input (e.g. typing "800 petrol from HDFC yesterday" and having it parsed automatically)`,
     image: "/images/finoryx.png",
     images: [
-      "/images/finoryx.png",
-      "/images/finoryx1.png",
-      "/images/finoryx2.png",
-      "/images/finoryx3.png",
-      "/images/finoryx4.png",
-      "/images/finoryx5.png",
+      "/images/finoryx/hero.png",
+      "/images/finoryx/features.png",
+      "/images/finoryx/usecase.png",
+      "/images/finoryx/dashboard.png",
+      "/images/finoryx/transactions.png",
+      // "/images/finoryx/recurringtransactions.png",
+      "/images/finoryx/groups.png",
+      "/images/finoryx/aiInsight.png",
+      // "/images/finoryx/analytics.png",
     ],
     languagesUsed: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",

@@ -37,6 +37,7 @@ const FeaturedProjects = ({ projects = [] }: { projects?: any[] }) => {
               github={project.github}
               url={project.url}
               image={project.image}
+              images={project.images}
             />
           </div>
         ))}

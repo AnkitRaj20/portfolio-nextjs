@@ -127,6 +127,7 @@ type Props = {
   name: string;
   description?: string;
   image?: string;
+  images?: string[];
   languagesUsed?: string[];
   github?: string | null;
   url?: string | null;
@@ -140,6 +141,7 @@ const Card: FC<Props> = ({
   name,
   description,
   image,
+  images = [],
   languagesUsed = [],
   github,
   url,
@@ -148,24 +150,67 @@ const Card: FC<Props> = ({
   publishedAt,
 }) => {
   const blogUrl = `https://${tag === 'dsa' ? 'dsa-with-ankit' : 'development-with-ankit'}.hashnode.dev/${id}`;
+  const displayImages = images.length > 0 ? images : (image ? [image] : []);
+  
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  React.useEffect(() => {
+    if (displayImages.length <= 1 || isHovered) return;
+    
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const { clientWidth, scrollLeft, scrollWidth } = scrollRef.current;
+        const maxScrollLeft = scrollWidth - clientWidth;
+        if (scrollLeft >= maxScrollLeft - 10) {
+          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          scrollRef.current.scrollBy({ left: clientWidth, behavior: "smooth" });
+        }
+      }
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, [displayImages.length, isHovered]);
 
   return (
     <div>
-      <article className="relative h-[500px] flex flex-col overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25">
+      <article 
+        className="relative h-[500px] flex flex-col overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25 group"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {/* Image or fallback */}
         <div className="relative h-56 w-full">
-          {image ? (
-            <Image
-              src={image}
-              alt={name}
-              fill
-              className="object-cover"
-              sizes="100vw"
-              priority={false}
-            />
+          {displayImages.length > 0 ? (
+            <div 
+              ref={scrollRef}
+              className="flex h-full w-full overflow-x-auto snap-x snap-mandatory hide-scrollbar"
+            >
+              {displayImages.map((img, idx) => (
+                <div key={idx} className="relative h-full w-full flex-none snap-start">
+                  <Image
+                    src={img}
+                    alt={`${name} image ${idx + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                    priority={false}
+                  />
+                </div>
+              ))}
+            </div>
           ) : (
             <div className="h-full w-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500 text-sm">
               No image available
+            </div>
+          )}
+          
+          {displayImages.length > 1 && (
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+              {displayImages.map((_, idx) => (
+                <div key={idx} className="w-1.5 h-1.5 rounded-full bg-white/70 shadow-sm" />
+              ))}
             </div>
           )}
         </div>
