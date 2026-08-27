@@ -27,13 +27,13 @@ export const projectlist: Project[] = [
     id: "1",
     name: "YouHired",
     description:
-      "YouHired turns your GitHub profile and work history into a live portfolio and an ATS-optimized resume — from one unified profile. AI generates your bio from your real projects, not generic prompts, and you get weekly job matches based on your actual skills.",
-    detailedDescription: `YouHired is an AI-powered developer portfolio and resume platform built to solve a real problem: developers rebuild the same information<br /> — projects, skills, experience <br />— separately for every portfolio, resume, and job application. <br />YouHired centralizes it into one profile and generates everything else from that single source.
+      "YouHired turns your GitHub profile and work history into a live portfolio and an ATS-optimized resume - from one unified profile. AI generates your bio from your real projects, not generic prompts, and you get weekly job matches based on your actual skills.",
+    detailedDescription: `YouHired is an AI-powered developer portfolio and resume platform built to solve a real problem: developers rebuild the same information<br /> - projects, skills, experience <br />- separately for every portfolio, resume, and job application. <br />YouHired centralizes it into one profile and generates everything else from that single source.
 <br /><br />
-The platform is built as two coordinated applications <br />— a Next.js marketing site and a full MERN-stack dashboard app <br />— sharing one backend for data, transformations, and generation.
+The platform is built as two coordinated applications <br />- a Next.js marketing site and a full MERN-stack dashboard app <br />- sharing one backend for data, transformations, and generation.
 <br /><br />
 How it works:<br />
-A user connects their GitHub and fills out a structured profile once. From that single data source, YouHired generates a live portfolio, an ATS-optimized resume, and an AI-written bio grounded in the user's actual project history — not generic filler text. A recommendation engine then surfaces weekly job matches based on the user's real skills and preferences, and everything<br /> — portfolio and resume alike<br /> — can be exported or shared with one link.
+A user connects their GitHub and fills out a structured profile once. From that single data source, YouHired generates a live portfolio, an ATS-optimized resume, and an AI-written bio grounded in the user's actual project history - not generic filler text. A recommendation engine then surfaces weekly job matches based on the user's real skills and preferences, and everything<br /> - portfolio and resume alike<br /> - can be exported or shared with one link.
 <br /><br />
 What I built:
 <br />
@@ -44,7 +44,7 @@ A weekly job-recommendation system matched to user profile data<br />
 A template-driven rendering layer so layouts can change without touching underlying data<br />
 GitHub API integration to auto-sync and display real project history`,
     image: "/images/youhired.png",
-    images: ["/images/youhired.png"],
+    images: ["/images/youhired/hero.png", "/images/youhired/usecase.png", "/images/youhired/dashboard.png", "/images/youhired/template.png", "/images/youhired/jobs.png", "/images/youhired/jobDetails.png", "/images/youhired/analysis.png", "/images/youhired/resumeBuilder.png"],
     languagesUsed: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
@@ -66,7 +66,7 @@ GitHub API integration to auto-sync and display real project history`,
       "Export & Sharing",
       "Razorpay for Accepting Payment",
     ],
-    github: "https://github.com/AnkitRaj20/codefolio",
+    // github: "https://github.com/AnkitRaj20/codefolio",
     url: "https://youhired.cloud",
     links: [],
     tag: "fullstack",
@@ -76,7 +76,7 @@ GitHub API integration to auto-sync and display real project history`,
     id: "2",
     name: "Finoryx",
     description:
-      "Finoryx is a personal finance tracker for managing everyday expenses, recurring transactions, and shared costs with others — built to replace my own budgeting spreadsheet. Tracks spending patterns, automates recurring bills, and splits group expenses, Splitwise-style.",
+      "Finoryx is a personal finance tracker for managing everyday expenses, recurring transactions, and shared costs with others - built to replace my own budgeting spreadsheet. Tracks spending patterns, automates recurring bills, and splits group expenses, Splitwise-style.",
     detailedDescription: `Finoryx started as a personal need: spreadsheets weren't cutting it for tracking recurring bills, shared expenses with friends, and actual spending patterns over time. I built it as a full-stack personal finance platform that handles all three in one place.
 <br /><br />
 The core is a dashboard that tracks monthly budgets, account balances, and spending against a set budget target in real time. Recurring transactions <br />- daily, weekday-only, monthly, or yearly <br />- are automatically processed on schedule rather than requiring manual entry every time, and a group expense feature lets shared costs (rent splits, group purchases, utilities) be tracked and settled the way Splitwise handles shared expenses.
@@ -126,17 +126,17 @@ A quick-add expense flow supporting natural-language input (e.g. typing "800 pet
     id: "13",
     name: "Khiladi Adda",
     description:
-      "Khiladi Adda is a real-money gaming ecosystem (Ludo, Rummy, tournaments) with secure KYC onboarding, real-time wallets, and compliance-safe payment flows — built to handle high-traffic gaming operations at scale.",
-    detailedDescription: `Khiladi Adda is a real-money gaming (RMG) platform supporting multiple games — Ludo, Rummy, Ludo Tournament, Cricket Tournament — with the full compliance and financial infrastructure real-money apps require: KYC onboarding, wallet management, and region-aware legal compliance.
+      "Khiladi Adda is a real-money gaming ecosystem (Ludo, Rummy, tournaments) with secure KYC onboarding, real-time wallets, and compliance-safe payment flows - built to handle high-traffic gaming operations at scale.",
+    detailedDescription: `Khiladi Adda is a real-money gaming (RMG) platform supporting multiple games - Ludo, Rummy, Ludo Tournament, Cricket Tournament - with the full compliance and financial infrastructure real-money apps require: KYC onboarding, wallet management, and region-aware legal compliance.
 <br/><br/>
 I worked across the platform's backend and its Rummy-specific product line (RummyAdda), plus a standalone sibling app (Bharat Rummy) built entirely backend-first. Across these, I handled everything from onboarding and wallets to performance optimization at scale.
 <br/><br/>
 User-facing systems:
 <br/>
-KYC onboarding — Aadhaar/PAN verification workflows for secure user registration <br/>
-Wallet system — real-time balance updates, deposits, withdrawals, and winnings transfers, with full transaction logs <br/>
-Location-based compliance — auto-detects a user's state/country via IP to enforce region-specific gaming rules <br/>
-TDS compliance — automated tax deduction handling on winnings, per Indian regulations <br/>
+KYC onboarding - Aadhaar/PAN verification workflows for secure user registration <br/>
+Wallet system - real-time balance updates, deposits, withdrawals, and winnings transfers, with full transaction logs <br/>
+Location-based compliance - auto-detects a user's state/country via IP to enforce region-specific gaming rules <br/>
+TDS compliance - automated tax deduction handling on winnings, per Indian regulations <br/>
 Multiple payment gateway integrations for deposits and withdrawals
 <br/><br/>
 Performance and infrastructure:
@@ -181,10 +181,10 @@ I also contributed to the React.js-based admin panel used for real-time platform
     id: "11",
     name: "LMS",
     description:
-      "A production-ready LMS backend supporting role-based course management for admins, instructors, and students — with secure payments, certificate generation, and full progress tracking.",
-    detailedDescription: `This is a backend system for a full-scale Learning Management System, built to support real course delivery — not just CRUD operations. It handles three distinct user roles (admin, instructor, student), each with different permissions and access to course, payment, and progress data.
+      "A production-ready LMS backend supporting role-based course management for admins, instructors, and students - with secure payments, certificate generation, and full progress tracking.",
+    detailedDescription: `This is a backend system for a full-scale Learning Management System, built to support real course delivery - not just CRUD operations. It handles three distinct user roles (admin, instructor, student), each with different permissions and access to course, payment, and progress data.
 <br /><br />
-The system covers the full lifecycle of an online course: enrollment and payment, lecture progress tracking, wishlisting, and certificate generation on completion — all behind a versioned, secured API layer.
+The system covers the full lifecycle of an online course: enrollment and payment, lecture progress tracking, wishlisting, and certificate generation on completion - all behind a versioned, secured API layer.
 <br /><br />
 Core systems:
 <br />
@@ -228,17 +228,17 @@ Versioned API structure (/api/v1/) for clean long-term scalability<br />`,
     id: "10",
     name: "EventPulse",
     description:
-      "EventPulse is an anonymous event posting and application platform built on a Node.js microservices architecture, handling ~10k daily active users. Worked on the real-time infrastructure — Kafka streaming, Socket.io chat, and Redis caching — as part of the engineering team.",
-    detailedDescription: `EventPulse is an anonymous event posting and application platform, built to handle real-time interaction — chat, notifications, and applications — at scale. I worked on this as part of the engineering team, focused primarily on the platform's real-time infrastructure and performance layer.<br /><br />
+      "EventPulse is an anonymous event posting and application platform built on a Node.js microservices architecture, handling ~10k daily active users. Worked on the real-time infrastructure - Kafka streaming, Socket.io chat, and Redis caching - as part of the engineering team.",
+    detailedDescription: `EventPulse is an anonymous event posting and application platform, built to handle real-time interaction - chat, notifications, and applications - at scale. I worked on this as part of the engineering team, focused primarily on the platform's real-time infrastructure and performance layer.<br /><br />
 
 The platform runs on a Node.js microservices architecture, distributing load across specialized services to support around 10,000 daily active users without single points of bottleneck.
 <br /><br />
 What I worked on:
 <br />
- - Real-time data streaming — used Kafka to process live notifications and chat data, increasing overall system throughput by 70% <br />
- - Live chat infrastructure — built with Socket.io for near-instant messaging with robust concurrency handling. <br />
- - Caching layer — implemented Redis for frequently accessed data, cutting average response times by roughly 60%. <br />
- - Notification system — integrated Firebase push notifications with a priority queue for time-sensitive alerts, achieving a 99.9% delivery rate
+ - Real-time data streaming - used Kafka to process live notifications and chat data, increasing overall system throughput by 70% <br />
+ - Live chat infrastructure - built with Socket.io for near-instant messaging with robust concurrency handling. <br />
+ - Caching layer - implemented Redis for frequently accessed data, cutting average response times by roughly 60%. <br />
+ - Notification system - integrated Firebase push notifications with a priority queue for time-sensitive alerts, achieving a 99.9% delivery rate
 <br /><br />
 Supporting systems (team-built):
 <br />
@@ -273,8 +273,8 @@ Razorpay integration for in-platform payments`,
     id: "12",
     name: "Blog Platform Backend",
     description:
-      "A scalable blog platform backend with JWT authentication, a fully nested comment system, and Facebook-style emoji reactions — built with clean, versioned RESTful APIs.",
-    detailedDescription: `This is a backend API for a modern blog platform, built to support real content and community interaction — not just basic post CRUD. The standout piece is the comment system: full nested comments and replies with complete CRUD operations, plus Facebook-style emoji reactions on posts, giving the platform genuine social/interactive depth beyond a typical blog backend. <br /><br />
+      "A scalable blog platform backend with JWT authentication, a fully nested comment system, and Facebook-style emoji reactions - built with clean, versioned RESTful APIs.",
+    detailedDescription: `This is a backend API for a modern blog platform, built to support real content and community interaction - not just basic post CRUD. The standout piece is the comment system: full nested comments and replies with complete CRUD operations, plus Facebook-style emoji reactions on posts, giving the platform genuine social/interactive depth beyond a typical blog backend. <br /><br />
 
 Core systems:
 <br />
@@ -352,8 +352,8 @@ Architecture and security:
     id: "8",
     name: "EazeAccounts",
     description:
-      "A QuickBooks-style accounting platform built for a Chartered Accountant client — handling full US accounting workflows: bank integration using Plaid, income and balance sheet management, and financial reporting for individuals and organizations.",
-    detailedDescription: `EazeAccounts is a financial management platform built for a real client — a Chartered Accountant needing QuickBooks-equivalent functionality for managing US accounting workflows across multiple clients and organizations.<br /><br />
+      "A QuickBooks-style accounting platform built for a Chartered Accountant client - handling full US accounting workflows: bank integration using Plaid, income and balance sheet management, and financial reporting for individuals and organizations.",
+    detailedDescription: `EazeAccounts is a financial management platform built for a real client - a Chartered Accountant needing QuickBooks-equivalent functionality for managing US accounting workflows across multiple clients and organizations.<br /><br />
 
 The platform handles the core financial documents an accountant actually needs: balance sheets, income statements, and a full Chart of Accounts, alongside multi-bank account tracking and transaction management. Every transaction feeds into real-time balance updates and detailed financial reports, so users always have an accurate, current view of their finances.
 <br /><br />
